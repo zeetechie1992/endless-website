@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endless home page, green, Brand kit to before and after</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300..500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:inherit}
+button{font-family:inherit;color:inherit}
+.g-code{font-family:'Google Sans Code',ui-monospace,monospace;letter-spacing:0.12em;text-transform:uppercase}
+.g-eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 5px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);font-family:'Google Sans Code',ui-monospace,monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#E6ECE8;white-space:nowrap;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.g-eyebrow .g-dot{width:24px;height:24px;border-radius:99px;background:#D4F27A;display:flex;align-items:center;justify-content:center}
+.g-h2{margin:0;font-size:72px;line-height:1.02;font-weight:400;letter-spacing:-0.04em;color:#FFFFFF}
+.g-h2 em{font-style:normal;color:#D4F27A}
+.g-lead{margin:0;font-size:19px;line-height:1.55;color:#C4D3CC}
+.g-glass{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);box-shadow:none}
+.g-frame{position:relative;box-sizing:border-box;padding:12px;border-radius:40px;background:#1A4239;box-shadow:0 0 0 1px rgba(255,255,255,0.04)}
+.g-in{position:relative;height:100%;border-radius:29px;overflow:hidden;background:#173B34}
+.g-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.g-shade{position:absolute;inset:0;background:rgba(12,36,31,0.32);pointer-events:none}
+.g-tile{transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.g-tile:hover{transform:translateY(-6px)}
+.g-tile:hover .g-img{transform:scale(1.06)}
+.g-arr{width:40px;height:40px;flex:0 0 40px;border-radius:13px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;transition:background .3s ease}
+.g-arr svg{transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.g-tile:hover .g-arr{background:#D4F27A !important}
+.g-tile:hover .g-arr svg{transform:rotate(45deg);stroke:#111111}
+.g-btn{text-decoration:none;display:inline-flex;align-items:center;gap:14px;height:68px;box-sizing:border-box;padding:0 10px 0 28px;border-radius:22px;background:#FFFFFF;color:#1A4239;font-size:18px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap;box-shadow:0 0 0 1px rgba(17,17,17,0.9);transition:background .25s ease,color .25s ease,transform .2s ease}
+.g-btn:hover{background:#1E5A3C;color:#FFFFFF;transform:translateY(-2px)}
+.g-btn .g-chipa{width:48px;height:48px;border-radius:14px;background:#D4F27A;display:flex;align-items:center;justify-content:center;transition:transform .25s ease}
+.g-btn:hover .g-chipa{transform:translateX(3px)}
+.g-btn2{text-decoration:none;display:inline-flex;align-items:center;gap:14px;height:68px;box-sizing:border-box;padding:0 10px 0 28px;border-radius:22px;color:#FFFFFF;font-size:18px;font-weight:500;white-space:nowrap}
+.g-btn2 .g-chipb{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,0.10);display:flex;align-items:center;justify-content:center;transition:background .2s ease}
+.g-btn2:hover .g-chipb{background:#D4F27A}
+.g-btn2:hover .g-chipb svg{stroke:#111111}
+.g-tag{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:13px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);color:#E6ECE8;font-size:15px;white-space:nowrap}
+.g-filter{height:44px;padding:0 10px 0 18px;border:0;border-radius:14px;cursor:pointer;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease,color .25s ease}
+.g-wcard{text-decoration:none;display:flex;flex-direction:column;gap:14px;color:#FFFFFF}
+.g-wcard .g-view{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:99px;background:#D4F27A;color:#111111;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;transform:scale(0.4);opacity:0;transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .3s ease}
+.g-wcard:hover .g-view{transform:scale(1);opacity:1}
+.g-wcard:hover .g-img{transform:scale(1.06)}
+.g-ba{-webkit-appearance:none;appearance:none;background:transparent;position:absolute;inset:0;width:100%;height:100%;margin:0;z-index:5;cursor:ew-resize;opacity:0}
+a:focus-visible,button:focus-visible{outline:2px solid #D4F27A;outline-offset:3px}
+.g-ftag{position:absolute;z-index:4;display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:14px;border:1px solid;font-family:'Google Sans Code',ui-monospace,monospace;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.g-kthumb img{filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)}.g-kthumb:hover img{filter:none;transform:scale(1.05)}
+@keyframes gTagOut0{0%,10%{transform:translate(28px,646px) rotate(0deg) scale(.3);opacity:0}14%{opacity:1}30%{transform:translate(0,0) rotate(-10deg) scale(1.12);opacity:1}38%,68%{transform:translate(0,0) rotate(-4deg) scale(1);opacity:1}84%{opacity:1}90%,100%{transform:translate(28px,646px) rotate(0deg) scale(.3);opacity:0}}
+@keyframes gTagOut1{0%,10%{transform:translate(489px,612px) rotate(0deg) scale(.3);opacity:0}14%{opacity:1}30%{transform:translate(0,0) rotate(-18deg) scale(1.12);opacity:1}38%,68%{transform:translate(0,0) rotate(-12deg) scale(1);opacity:1}84%{opacity:1}90%,100%{transform:translate(489px,612px) rotate(0deg) scale(.3);opacity:0}}
+@keyframes gTagOut2{0%,10%{transform:translate(-477px,586px) rotate(0deg) scale(.3);opacity:0}14%{opacity:1}30%{transform:translate(0,0) rotate(20deg) scale(1.12);opacity:1}38%,68%{transform:translate(0,0) rotate(14deg) scale(1);opacity:1}84%{opacity:1}90%,100%{transform:translate(-477px,586px) rotate(0deg) scale(.3);opacity:0}}
+@keyframes gTagOut3{0%,10%{transform:translate(480px,326px) rotate(0deg) scale(.3);opacity:0}14%{opacity:1}30%{transform:translate(0,0) rotate(-14deg) scale(1.12);opacity:1}38%,68%{transform:translate(0,0) rotate(-8deg) scale(1);opacity:1}84%{opacity:1}90%,100%{transform:translate(480px,326px) rotate(0deg) scale(.3);opacity:0}}
+@keyframes gTagOut4{0%,10%{transform:translate(-455px,308px) rotate(0deg) scale(.3);opacity:0}14%{opacity:1}30%{transform:translate(0,0) rotate(16deg) scale(1.12);opacity:1}38%,68%{transform:translate(0,0) rotate(10deg) scale(1);opacity:1}84%{opacity:1}90%,100%{transform:translate(-455px,308px) rotate(0deg) scale(.3);opacity:0}}
+@keyframes gPop0{0%,6%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}24%{transform:translateX(-280px) translateY(-40px) rotate(-16deg) scale(1.04)}32%,70%{transform:translateX(-280px) translateY(-20px) rotate(-16deg) scale(1)}90%,100%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}}
+@keyframes gPop1{0%,6%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}24%{transform:translateX(-142px) translateY(-90px) rotate(-8deg) scale(1.04)}32%,70%{transform:translateX(-142px) translateY(-70px) rotate(-8deg) scale(1)}90%,100%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}}
+@keyframes gPop2{0%,6%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}24%{transform:translateX(0px) translateY(-120px) rotate(0deg) scale(1.04)}32%,70%{transform:translateX(0px) translateY(-100px) rotate(0deg) scale(1)}90%,100%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}}
+@keyframes gPop3{0%,6%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}24%{transform:translateX(142px) translateY(-90px) rotate(8deg) scale(1.04)}32%,70%{transform:translateX(142px) translateY(-70px) rotate(8deg) scale(1)}90%,100%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}}
+@keyframes gPop4{0%,6%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}24%{transform:translateX(280px) translateY(-40px) rotate(16deg) scale(1.04)}32%,70%{transform:translateX(280px) translateY(-20px) rotate(16deg) scale(1)}90%,100%{transform:translateX(0px) translateY(170px) rotate(0deg) scale(.66)}}
+@keyframes gTagBob{0%{translate:0 0;rotate:0deg}25%{translate:6px -14px;rotate:4deg}50%{translate:0 -22px;rotate:-2deg}75%{translate:-6px -10px;rotate:-5deg}100%{translate:0 0;rotate:0deg}}
+@keyframes gTagPop{0%,100%{scale:1}8%{scale:1.12}16%{scale:.96}22%{scale:1}}
+@keyframes gSw{0%,70%,100%{translate:0 0;scale:1}78%{translate:0 -10px;scale:1.18}86%{translate:0 0;scale:.94}92%{scale:1}}
+@keyframes gBar{0%,100%{box-shadow:none}50%{box-shadow:none}}
+@keyframes gThumb{from{translate:0 0}to{translate:0 -12px}}
+.lt .g-h2{color:#131514}.lt .g-h2 em{color:#2F7A4A;background:none}
+.lt .g-lead{color:#576059}.lt .g-eyebrow{background:#FFFFFF;border-color:rgba(19,21,20,0.10);color:#1A4239}.lt .g-eyebrow .g-dot{background:#12332D}.lt .g-eyebrow .g-dot path{fill:#D4F27A}
+.lt .g-glass{background:#FFFFFF;border-color:rgba(19,21,20,0.10);box-shadow:none}
+.lt .g-btn2,.lt .g-btn2.g-glass{color:#111111;background:#D4F27A;border-color:#D4F27A;box-shadow:none}.lt .g-btn2 .g-chipb{background:#12332D}.lt .g-btn2 svg{stroke:#D4F27A}.lt .g-btn2:hover .g-chipb{background:#1E5A3C}.lt .g-btn2:hover .g-chipb svg{stroke:#D4F27A}
+.lt .g-tag{background:#F4F3EF;border-color:rgba(19,21,20,0.08);color:#131514}
+
+@keyframes gTick{to{transform:translateX(-50%)}}
+@keyframes gCyc{0%{opacity:0}4%{opacity:1}33%{opacity:1}37%{opacity:0}100%{opacity:0}}
+@keyframes gColU{to{transform:translateY(-50%)}}
+@keyframes gColD{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+@keyframes gCsA{from{opacity:.2;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes gCsB{from{opacity:.2;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes gPulseG{0%{box-shadow:0 0 0 0 rgba(47,122,74,.45)}100%{box-shadow:0 0 0 12px rgba(47,122,74,0)}}
+@keyframes gBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes gBob{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+@keyframes gSpin{to{transform:rotate(360deg)}}
+@keyframes gPulse{0%{box-shadow:0 0 0 0 rgba(212,242,122,.55)}100%{box-shadow:0 0 0 10px rgba(212,242,122,0)}}
+@keyframes gHalo{from{opacity:.35;transform:scale(.96)}to{opacity:.8;transform:scale(1.03)}}
+@keyframes gDash{to{stroke-dashoffset:-40}}
+@keyframes gRail{from{left:-40%}to{left:100%}}
+@keyframes gRing{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.ly .g-h2{color:#111111}.ly .g-h2 em{color:#12332D}.ly .g-lead{color:#1A4239}.ly .g-eyebrow{background:rgba(18,51,45,0.08);border-color:rgba(18,51,45,0.14);color:#12332D}.ly .g-eyebrow .g-dot{background:#12332D}.ly .g-eyebrow .g-dot path{fill:#D4F27A}
+.g-step .g-frame{padding:4px;border-radius:32px;background:rgba(255,255,255,0.06)}.g-step .g-frame>.g-in{border-radius:28px}.g-step{transition:transform .5s cubic-bezier(.16,1,.3,1)}.g-step:hover{transform:translateY(-6px)}.g-step .g-frame{transition:box-shadow .4s ease}.g-step:hover .g-frame{box-shadow:0 0 0 1px rgba(212,242,122,0.35)}
+@keyframes gTravel{from{offset-distance:0%}to{offset-distance:100%}}
+@keyframes gRise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.g-rise{animation:gRise linear both;animation-timeline:view();animation-range:entry 0% entry 90%}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+
+.g-eyebrow{height:44px !important;padding:0 20px 0 6px !important;gap:12px !important;font-size:15px !important}
+.g-eyebrow .g-dot{width:32px !important;height:32px !important;background:#D4F27A !important}
+.g-eyebrow .g-dot svg{width:14px;height:14px}
+.g-eyebrow .g-dot path{fill:#111111 !important}
+.g-eyebrow{height:46px !important;padding:0 22px 0 7px !important;gap:12px !important;font-size:15px !important;letter-spacing:0.14em !important;background:#D4F27A !important;border:0 !important;color:#12332D !important;box-shadow:none}.g-eyebrow .g-dot{width:32px !important;height:32px !important;background:#12332D !important}.g-eyebrow .g-dot svg{width:14px;height:14px}.g-eyebrow .g-dot path{fill:#D4F27A !important}
+.g-eyebrow{margin-bottom:8px}
+
+
+/* ---- Enterprise scale: class-level type, buttons, labels ---- */
+.g-h2{font-size:48px;line-height:1.08;letter-spacing:-0.03em}
+.g-lead{font-size:18px;line-height:1.6}
+.g-eyebrow{height:34px !important;padding:0 14px 0 5px !important;gap:10px !important;font-size:12px !important;letter-spacing:0.12em !important}
+.g-eyebrow .g-dot{width:24px !important;height:24px !important}
+.g-eyebrow .g-dot svg{width:11px !important;height:11px !important}
+.bx-eyebrow{height:34px;padding:0 14px 0 5px;gap:10px;font-size:12px;letter-spacing:0.12em}
+.bx-dot{width:24px;height:24px}
+.bx-dot svg{width:11px;height:11px}
+.g-btn,.g-btn2,.g-btnd{height:52px;padding:0 6px 0 22px;gap:12px;border-radius:16px;font-size:16px}
+.g-btn .g-chipa,.g-btnd .g-chipa,.g-btn2 .g-chipb{width:40px;height:40px;border-radius:12px}
+.g-tag{height:36px;padding:0 14px;border-radius:11px;font-size:14px}
+.g-filter{height:40px;font-size:14px}
+.g-ftag{height:38px;padding:0 16px;font-size:12px}
+.g-faq{font-size:18px;padding:22px 0}
+.g-arr{width:36px;height:36px;flex:0 0 36px;border-radius:11px}
+.g-seg{height:44px;font-size:15px}
+.g-dz{height:44px;font-size:15px}
+.f5-link{font-size:16px}
+
+/* ---- QA: shared type + spacing system (responsive) ---- */
+[style*="font-size: 11px"],[style*="font-size: 10px"]{font-size:12px !important}
+@media (max-width:1024px){
+  section[style*="padding: 112px 24px 112px"],section[style*="padding: 112px 0 112px"]{padding-top:96px !important;padding-bottom:96px !important}
+  section[style*="padding: 112px 24px 96px"],section[style*="padding: 96px 24px 96px"]{padding-top:96px !important;padding-bottom:96px !important}
+  section[style*="padding: 112px 24px 0"],section[style*="padding: 96px 24px 0"]{padding-top:96px !important}
+  .g-h2,h2[style*="font-size: 48px"]{font-size:44px !important}
+  h2[style*="font-size: 64px"]{font-size:56px !important}
+}
+@media (max-width:640px){
+  section[style*="padding: 112px 24px 112px"],section[style*="padding: 112px 24px 96px"],section[style*="padding: 96px 24px 96px"]{padding:72px 20px !important}
+  section[style*="padding: 112px 0 112px"]{padding:72px 0 !important}
+  section[style*="padding: 112px 24px 0"],section[style*="padding: 96px 24px 0"]{padding:72px 20px 0 !important}
+  .g-h2,h2[style*="font-size: 48px"]{font-size:34px !important;line-height:1.1 !important;text-wrap:balance}
+  h2[style*="font-size: 64px"]{font-size:40px !important;line-height:1.06 !important;text-wrap:balance}
+  .g-lead,p[style*="font-size: 18px"]{font-size:17px !important}
+  h2.g-h2.p[style*="white-space: nowrap"]{white-space:normal !important}
+  p[style*="font-size: 15px"],[style*="font-size: 15px; line-height: 1.5"]{font-size:16px !important}
+  p[style*="font-size: 13px"],span[style*="margin-top: 14px; font-size: 13px"]{font-size:14px !important}
+  [style*="justify-content: space-between; gap: 48px"]{flex-direction:column !important;align-items:flex-start !important;gap:24px !important}
+  .g-btn,.g-btn2,.g-btnd{padding:0 6px 0 20px !important;gap:10px !important;font-size:16px !important}
+}
+
+/* ---- QA: brand kit, how it works ---- */
+@media (max-width:900px){
+  .g-ftwrap{padding:64px 0 76px !important}
+  .g-ftag{zoom:.8;animation:gTagBob 6s ease-in-out infinite !important}
+  .g-ftag:nth-of-type(1){left:calc(50% - 44px) !important;top:0 !important}
+  .g-ftag:nth-of-type(2){left:4% !important;top:18px !important}
+  .g-ftag:nth-of-type(3){left:auto !important;right:5% !important;top:14px !important}
+  .g-ftag:nth-of-type(4){left:6% !important;top:auto !important;bottom:6px !important}
+  .g-ftag:nth-of-type(5){left:auto !important;right:6% !important;top:auto !important;bottom:10px !important}
+}
+@media (max-width:640px){
+  .g-ftag{zoom:.68}
+  .g-ftag:nth-of-type(2){left:1% !important}
+  .g-ftag:nth-of-type(3){right:1% !important}
+}
+@media (max-width:1024px){
+  [style*="height: 600px; margin-top: 72px"]{zoom:.82}
+  .g-ftag{zoom:.8}
+}
+@media (max-width:900px){
+  [style*="height: 56px; margin-bottom: 28px"]{display:none !important}
+  [style*="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px"]{grid-template-columns:minmax(0,1fr) !important;max-width:560px;margin:0 auto}
+  .g-step h3{white-space:normal !important}
+}
+@media (max-width:640px){
+  [style*="height: 600px; margin-top: 72px"]{zoom:.54;margin-top:48px !important}
+  [style*="top: 480px; width: 3000px"]{top:330px !important}
+  [style*="top: 560px; width: 2600px"]{top:390px !important}
+  [style*="max-width: 900px; display: grid; grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  [style*="max-width: 900px; display: grid; grid-template-columns: repeat(4"]>div{height:140px !important}
+  [style*="max-width: 900px; display: grid; grid-template-columns: repeat(4"]{margin-top:96px !important}
+  [style*="grid-template-columns: 1fr auto 1fr"]{grid-template-columns:minmax(0,1fr) !important;justify-items:center;gap:20px !important}
+  [style*="grid-template-columns: 1fr auto 1fr"]>div{text-align:center !important}
+  [style*="justify-content: center; gap: 20px"]{flex-wrap:wrap}
+}
+/* Laptop gutters */
+@media (min-width:901px) and (max-width:1240px){[style*="max-width: 1160px"],[style*="max-width: 1040px"]{max-width:calc(100% - 80px) !important}[style*="max-width: 1240px"]{padding-left:64px !important;padding-right:64px !important}[style*="max-width: 1440px"][style*="padding: 12px 16px"]{padding-left:40px !important;padding-right:40px !important}h2{font-size:48px !important;line-height:1.08 !important;letter-spacing:-0.03em !important}}
+/* Section rhythm: tablet */
+@media (min-width:641px) and (max-width:900px){
+  section[style*="padding: 112px 24px 112px"],section[style*="padding: 112px 0 112px"],section[style*="padding: 112px 24px 96px"],section[style*="padding: 96px 24px 96px"]{padding-top:80px !important;padding-bottom:80px !important}
+  section[style*="padding: 112px 24px 0"],section[style*="padding: 96px 24px 0"]{padding-top:80px !important}
+  section#reviews,section#team{margin-top:72px !important}
+  .g-gapb{padding-bottom:72px !important}
+}
+</style>
+</helmet>
+<div style="position: relative; overflow: hidden; background: #12332D; color: #FFFFFF; font-family: 'Google Sans Flex', 'Google Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased">
+
+  <!-- Brand kit / folder -->
+  <sc-if value="{{ sec.kit }}" hint-placeholder-val="{{ true }}"><section aria-label="Your designs in one place" style="position: relative; z-index: 2; padding: 112px 24px 112px; overflow: hidden; background-color: #F4F3EF; background-image: linear-gradient(rgba(19,21,20,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(19,21,20,0.035) 1px, transparent 1px); background-size: 80px 80px; background-position: -1px -1px">
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: 480px; width: 3000px; height: 2400px; margin-left: -1500px; border-radius: 50%; background: #12332D; box-shadow: 0 0 0 1.5px rgba(212,242,122,0.55)"></div>
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: 560px; width: 2600px; height: 2000px; margin-left: -1300px; border-radius: 50%; border: 1px solid rgba(212,242,122,0.22)"></div>
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: 520px; width: 1300px; height: 700px; margin-left: -650px; border-radius: 50%; background: transparent"></div>
+    <div style="position: relative; max-width: 1160px; margin: 0 auto">
+      <!-- headline + floating tags -->
+      <div class="g-ftwrap" style="position: relative; text-align: center">
+        <h2 style="margin: 0; font-size: 60px; line-height: 1.04; font-weight: 400; letter-spacing: -0.035em">
+          <span style="color: #131514">Every design you own</span> <br>
+          <span style="color: #2F7A4A">All in one place</span>
+        </h2>
+        <sc-for list="{{ ftags }}" as="g"><span class="g-ftag" style="left: {{ g.x }}; top: {{ g.y }}; transform: rotate({{ g.r }}); background: {{ g.bg }}; border-color: {{ g.bd }}; box-shadow: none; color: {{ g.fg }}; animation: {{ g.an }}">{{ g.t }}</span></sc-for>
+      </div>
+
+      <!-- folder stage -->
+      <div style="position: relative; height: 600px; margin-top: 72px">
+        <!-- plinth behind the folder -->
+        <div aria-hidden="true" style="position: absolute; left: 50%; top: 210px; width: 720px; height: 380px; margin-left: -360px; border-radius: 56px; background: rgba(212,242,122,0.18); border: 1px solid rgba(212,242,122,0.35); box-shadow: none"></div>
+        <!-- designs popping out of the folder -->
+        <sc-for list="{{ fan }}" as="f">
+          <div style="position: absolute; left: 50%; top: 70px; width: 236px; height: 296px; margin-left: -118px; --x: {{ f.x }}; --y: {{ f.y }}; --r: {{ f.r }}; transform: translateX(var(--x)) translateY(var(--y)) rotate(var(--r)); transform-origin: 50% 110%; animation: {{ f.an }}; z-index: 1">
+            <img src="{{ f.img }}" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; display: block; box-shadow: 0 0 0 1px rgba(255,255,255,0.10)">
+          </div>
+        </sc-for>
+        <!-- realistic frosted folder -->
+        <div style="position: absolute; left: 50%; top: 150px; width: 640px; height: 420px; margin-left: -320px; z-index: 3">
+          <div aria-hidden="true" style="position: absolute; left: 30px; right: 30px; top: 140px; bottom: -30px; border-radius: 50px; background: rgba(6,22,18,0.55); filter: none"></div>
+          <div style="position: absolute; inset: 0; clip-path: path('M 0 46 Q 0 0 46 0 L 290 0 C 334 0 348 20 362 48 C 378 80 394 98 444 98 L 594 98 Q 640 98 640 144 L 640 374 Q 640 420 594 420 L 46 420 Q 0 420 0 374 Z'); background: rgba(122,166,36,0.82); -webkit-backdrop-filter: blur(30px) saturate(1.6); backdrop-filter: blur(30px) saturate(1.6)"></div>
+          <div style="position: absolute; inset: 0; clip-path: path('M 0 46 Q 0 0 46 0 L 290 0 C 334 0 348 20 362 48 C 378 80 394 98 444 98 L 594 98 Q 640 98 640 144 L 640 374 Q 640 420 594 420 L 46 420 Q 0 420 0 374 Z'); background: transparent"></div>
+          <svg aria-hidden="true" width="640" height="420" viewBox="0 0 640 420" style="position: absolute; inset: 0; overflow: visible"><path d="M 0 46 Q 0 0 46 0 L 290 0 C 334 0 348 20 362 48 C 378 80 394 98 444 98 L 594 98 Q 640 98 640 144 L 640 374 Q 640 420 594 420 L 46 420 Q 0 420 0 374 Z" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"></path><path d="M 0 46 Q 0 0 46 0 L 290 0 C 334 0 348 20 362 48 C 378 80 394 98 444 98 L 594 98 Q 640 98 640 144 L 640 374 Q 640 420 594 420 L 46 420 Q 0 420 0 374 Z" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="10" transform="translate(5 5) scale(0.984)"></path></svg>
+          <div style="position: absolute; left: 44px; right: 40px; bottom: 40px; display: flex; align-items: center; justify-content: space-between">
+            <span style="display: inline-flex; align-items: center; gap: 14px; font-size: 28px; letter-spacing: -0.025em; color: #FFFFFF; text-shadow: none"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M10.5 8l4 4-4 4"></path></svg>Your brand kit</span>
+            <span style="display: inline-flex; align-items: center; gap: 14px; height: 52px; padding: 0 22px; border-radius: 999px; background: #0C1F1B">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4F27A"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4F27A"><path d="M12 3a9 8 0 0 1 0 16c-1.4 0-2.7-.3-3.9-.8L4 20l1.2-3.6A8 8 0 0 1 12 3z"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4F27A"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4F27A"><path d="M21 3L3 10.5l7 2.5 2.5 7z"></path></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- thumbnails -->
+      <div style="margin: 56px auto 0; max-width: 900px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px">
+        <sc-for list="{{ kitThumbs }}" as="k">
+          <div class="g-kthumb" style="animation: {{ k.an }}; height: 186px; border-radius: 26px; overflow: hidden; background: #173B34; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10)"><img src="{{ k.img }}" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+        </sc-for>
+      </div>
+
+      <!-- bottom row -->
+      <div style="margin: 56px auto 0; max-width: 900px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 32px">
+        <div style="text-align: right; line-height: 1.2"><div style="font-size: 18px; color: #D4F27A; letter-spacing: -0.02em">Saved for you:</div><div style="font-size: 18px; color: #FFFFFF; letter-spacing: -0.02em">Logos, fonts, colors</div></div>
+        <div style="display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 16px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1.5px solid rgba(212,242,122,0.5); box-shadow: none; animation: {{ barGlow }}">
+          <sc-for list="{{ swatches }}" as="w"><span style="width: 30px; height: 30px; border-radius: 7px; background: {{ w.c }}; animation: {{ w.an }}; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18)"></span></sc-for>
+        </div>
+        <div style="line-height: 1.2"><div style="font-size: 18px; color: #D4F27A; letter-spacing: -0.02em">Ready to download:</div><div style="font-size: 18px; color: #FFFFFF; letter-spacing: -0.02em">Every file, every size</div></div>
+      </div>
+    </div>
+  </section></sc-if>
+
+  <!-- How it works -->
+  <sc-if value="{{ sec.how }}" hint-placeholder-val="{{ true }}"><section id="how" class="lt" style="position: relative; z-index: 2; padding: 112px 24px 112px; color: #131514; background-color: #FFFFFF; background-image: linear-gradient(rgba(19,21,20,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(19,21,20,0.035) 1px, transparent 1px); background-size: 80px 80px; background-position: -1px -1px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div class="g-rise" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+        <span class="g-eyebrow" style="align-self: center"><span class="g-dot"><svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.3 6.9 6.9 2.6-6.9 2.6L12 21.5l-2.3-6.9L2.8 12l6.9-2.6z" fill="#111111"></path></svg></span>How it works</span>
+        <h2 class="g-h2" style="max-width: 1040px; text-wrap: balance; font-size: 60px">Bring the brief &amp; we'll <br><em>take it from there</em></h2>
+        
+      </div>
+
+      <div style="position: relative; margin-top: 56px">
+        <div aria-hidden="true" style="position: relative; height: 56px; margin-bottom: 28px">
+          <div style="position: absolute; left: 16.66%; right: 16.66%; top: 27px; height: 2px; border-radius: 2px; background: rgba(18,51,45,0.12); overflow: hidden">
+            <div style="position: absolute; top: 0; bottom: 0; width: 40%; background: #12332D; animation: {{ railRun }}"></div>
+          </div>
+          <sc-for list="{{ steps }}" as="p">
+            <div style="position: absolute; left: {{ p.cx }}; top: 0; width: 56px; height: 56px; margin-left: -28px">
+              <span style="position: absolute; inset: -8px; border-radius: 99px; border: 1px solid rgba(18,51,45,0.3); animation: {{ p.ring }}"></span>
+              <span style="position: absolute; inset: 0; border-radius: 99px; background: #12332D; box-shadow: 0 0 0 2px #D4F27A; display: flex; align-items: center; justify-content: center; font-family: 'Google Sans Code', ui-monospace, monospace; font-size: 15px; letter-spacing: 0.04em; color: #D4F27A">{{ p.n }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+          <sc-for list="{{ steps }}" as="p">
+            <div class="g-rise g-step" style="position: relative">
+              <div class="g-frame" style="height: 430px">
+                <div class="g-in" style="display: flex; flex-direction: column; padding: 26px 26px 26px; box-sizing: border-box; background: #EAEAE4; box-shadow: inset 0 0 0 1px rgba(19,21,20,0.06)">
+                  <div style="position: relative; display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px"><span class="g-code" style="display: inline-flex; align-items: center; gap: 10px; height: 30px; padding: 0 12px 0 4px; border-radius: 999px; background: #FFFFFF; font-size: 11px; color: #12332D"><span style="width: 22px; height: 22px; border-radius: 99px; background: #12332D; color: #D4F27A; display: flex; align-items: center; justify-content: center; font-size: 10px; letter-spacing: 0">{{ p.n }}</span>Step {{ p.n }}</span><span style="width: 40px; height: 40px; border-radius: 13px; background: #FFFFFF; box-shadow: inset 0 0 0 1px rgba(19,21,20,0.08); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12332D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="{{ p.icon }}"></path></svg></span></div>
+                  <h3 style="position: relative; margin: 0; font-size: 22px; line-height: 1.15; font-weight: 400; letter-spacing: -0.025em; white-space: nowrap">{{ p.t }}</h3>
+                  <p style="position: relative; margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: #576059">{{ p.d }}</p>
+                  <div style="position: relative; margin-top: auto">
+                    <sc-if value="{{ p.s1 }}">
+                      <div style="box-sizing: border-box; padding: 18px; border-radius: 22px; background: #12332D; color: #FFFFFF">
+                        <div style="display: flex; align-items: center; justify-content: space-between"><span class="g-code" style="font-size: 11px; color: #9FB5AC">New request</span><span style="display: flex; gap: 4px"><span style="width: 7px; height: 7px; border-radius: 99px; background: rgba(255,255,255,0.2)"></span><span style="width: 7px; height: 7px; border-radius: 99px; background: rgba(255,255,255,0.2)"></span><span style="width: 7px; height: 7px; border-radius: 99px; background: #D4F27A"></span></span></div>
+                        <div style="margin-top: 12px; font-size: 16px; line-height: 1.5; color: #FFFFFF">A launch flyer for our summer menu, A4 and a square version for Instagram<span style="display: inline-block; width: 2px; height: 18px; margin-left: 2px; vertical-align: -3px; background: #D4F27A; animation: {{ blink }}"></span></div>
+                        <div style="margin-top: 16px; display: flex; align-items: center; justify-content: space-between">
+                          <span style="display: flex; gap: 6px"><span style="padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); font-size: 12px; color: #C4D3CC">Flyer</span><span style="padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); font-size: 12px; color: #C4D3CC">Social media</span></span>
+                          <span style="width: 38px; height: 38px; border-radius: 12px; background: #D4F27A; display: flex; align-items: center; justify-content: center; animation: {{ pulse }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M6 11l6-6 6 6"></path></svg></span>
+                        </div>
+                      </div>
+                    </sc-if>
+                    <sc-if value="{{ p.s2 }}">
+                      <div style="box-sizing: border-box; padding: 18px; border-radius: 22px; background: #12332D; color: #FFFFFF">
+                        <div style="display: flex; align-items: center; justify-content: space-between">
+                          <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: #FFFFFF"><span style="width: 8px; height: 8px; border-radius: 99px; background: #D4F27A; animation: {{ pulse }}"></span>In progress</span>
+                          <span style="font-family: 'Google Sans Code', ui-monospace, monospace; font-size: 13px; color: #D4F27A">{{ timeShort }} left</span>
+                        </div>
+                        <div style="margin-top: 14px; height: 10px; border-radius: 99px; background: rgba(255,255,255,0.08); overflow: hidden"><div style="height: 100%; width: {{ progressPct }}; border-radius: 99px; background: #D4F27A; transition: width .8s cubic-bezier(.16,1,.3,1)"></div></div>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px">
+                          <sc-for list="{{ steps2 }}" as="r">
+                            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: {{ r.c }}"><span style="width: 18px; height: 18px; border-radius: 99px; background: {{ r.b }}; display: flex; align-items: center; justify-content: center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>{{ r.t }}</div>
+                          </sc-for>
+                        </div>
+                      </div>
+                    </sc-if>
+                    <sc-if value="{{ p.s3 }}">
+                      <div style="position: relative; height: 204px; border-radius: 22px; overflow: hidden; background: #12332D; color: #FFFFFF">
+                        <img src="{{ I.p47 }}" alt="Finished post design" style="position: absolute; left: 20px; top: 20px; width: 128px; height: 160px; object-fit: cover; border-radius: 14px; display: block; transform: rotate(-4deg); box-shadow: none">
+                        <div style="position: absolute; left: 168px; right: 16px; top: 18px; display: flex; flex-direction: column; gap: 8px">
+                          <span style="align-self: flex-start; padding: 7px 11px; border-radius: 13px 13px 13px 4px; background: rgba(255,255,255,0.08); font-size: 13px; color: #E6ECE8">Can the headline be bigger?</span>
+                          <span style="align-self: flex-end; padding: 7px 11px; border-radius: 13px 13px 4px 13px; background: #2A564D; font-size: 13px; color: #FFFFFF">Done, revision 2 is up</span>
+                          <span style="margin-top: 6px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: 12px; background: #D4F27A; color: #111111; font-size: 13px; font-weight: 500; animation: {{ bob }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Approved</span>
+                        </div>
+                      </div>
+                    </sc-if>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div class="g-rise" style="margin-top: 56px; display: flex; align-items: center; justify-content: center; gap: 20px">
+        <a class="g-btn" href="#pricing" style="height: 52px; padding: 0 6px 0 22px; gap: 12px; background: #D4F27A; color: #111111; box-shadow: none">Start your 3-day free trial<span class="g-chipa" style="background: #12332D"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4F27A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="g-btn2" href="#pricing" style="height: 52px; padding: 0 6px 0 22px; gap: 12px; border-radius: 16px; font-size: 16px; background: #2F7A4A; color: #FFFFFF; border: 1px solid #2F7A4A; box-shadow: none">See pricing<span class="g-chipb" style="background: #D4F27A"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#12332D" style="stroke: #12332D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section></sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"only":{"editor":null,"default":""},"motion":{"editor":"boolean","default":true,"section":"Motion"},"glyphs":{"editor":"range","min":0,"max":1,"step":0.05,"default":0.5,"section":"Background"},"$preview":{"width":1440,"height":2492}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { cs: 0, filter: 0, ba: 50, secs: 18 * 3600 + 42 * 60 };
+    this.cvs = {}; this.stops = [];
+    this.refA = (el) => { this.cvs.a = el; };
+    this.refB = (el) => { this.cvs.b = el; };
+    this.onBA = (e) => { const n = Number(e && e.target ? e.target.value : e); if (!isNaN(n)) this.setState({ ba: Math.min(100, Math.max(0, n)) }); };
+  }
+  componentDidMount() {
+    this.startAll();
+    this.csTimer = setInterval(() => { if (this.props.motion ?? true) this.setState((s) => ({ cs: s.cs + 1, csDir: 1 })); }, 4200);
+    this.tick = setInterval(() => {
+      if (!(this.props.motion ?? true)) return;
+      this.setState((s) => ({ secs: s.secs <= 1800 ? 23 * 3600 + 58 * 60 : s.secs - 600 }));
+    }, 1000);
+  }
+  componentDidUpdate(prev) {
+    if ((prev.motion ?? true) !== (this.props.motion ?? true) || (prev.glyphs ?? 0.5) !== (this.props.glyphs ?? 0.5)) { this.stopAll(); this.startAll(); }
+  }
+  componentWillUnmount() { this.stopAll(); clearInterval(this.tick); clearInterval(this.csTimer); }
+  stopAll() { this.stops.forEach((f) => f()); this.stops = []; }
+  startAll() { ['a', 'b'].forEach((k) => { const c = this.cvs[k]; if (c) this.stops.push(this.glyph(c)); }); }
+  glyph(canvas) {
+    const ctx = canvas.getContext && canvas.getContext('2d');
+    if (!ctx) return () => {};
+    const glyphs = '01·•+*/\\<>=';
+    const cell = 14, rate = 0.03, every = 110;
+    const palette = [[160, 124, 96], [160, 124, 96], [160, 124, 96], [214, 112, 76], [104, 150, 102]];
+    let cols = 0, rows = 0, last = 0, raf = 0, stopped = false, chars = [], alphas = [], tints = [];
+    const pick = () => glyphs[Math.floor(Math.random() * glyphs.length)];
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+      canvas.width = Math.max(1, Math.floor(w * dpr)); canvas.height = Math.max(1, Math.floor(h * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(w / cell); rows = Math.ceil(h / cell);
+      const n = cols * rows; chars = new Array(n); alphas = new Array(n); tints = new Array(n);
+      for (let i = 0; i < n; i++) { chars[i] = pick(); alphas[i] = 0.05 + Math.random() * 0.35; tints[i] = Math.floor(Math.random() * palette.length); }
+    };
+    const draw = () => {
+      const w = canvas.clientWidth, h = canvas.clientHeight, s = this.props.glyphs ?? 0.5;
+      ctx.clearRect(0, 0, w, h); if (s <= 0) return;
+      ctx.font = (cell - 2) + 'px ui-monospace, SFMono-Regular, Menlo, monospace'; ctx.textBaseline = 'top';
+      for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+        const i = y * cols + x, c = palette[tints[i]];
+        ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (alphas[i] * s).toFixed(3) + ')';
+        ctx.fillText(chars[i], x * cell, y * cell);
+      }
+    };
+    const tick = (t) => {
+      if (stopped) return;
+      if (t - last >= every) { last = t; const total = cols * rows, m = Math.max(1, Math.floor(total * rate)); for (let k = 0; k < m; k++) { const i = Math.floor(Math.random() * total); chars[i] = pick(); alphas[i] = 0.05 + Math.random() * 0.45; } draw(); }
+      raf = requestAnimationFrame(tick);
+    };
+    resize(); draw();
+    const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if ((this.props.motion ?? true) && !reduce) raf = requestAnimationFrame(tick);
+    let ro = null;
+    if (window.ResizeObserver) { ro = new ResizeObserver(() => { resize(); draw(); }); ro.observe(canvas); }
+    return () => { stopped = true; if (raf) cancelAnimationFrame(raf); if (ro) ro.disconnect(); };
+  }
+  renderVals() {
+    const __only = String(this.props.only || '').split(',').map((s) => s.trim()).filter(Boolean);
+    const __sec = {};
+    ["kit", "how"].forEach((k) => { __sec[k] = !__only.length || __only.includes(k); });
+    const m = this.props.motion ?? true;
+    const st = this.state;
+    const B = (id) => 'assets/' + id + '.svg';
+    const I = {
+      bun: B('faf8f2a55158f6e7e9a457c47fb7711c'), stride: B('faf8f2a55158f6e7e9a457c47fb7711c'), montra: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      oat: B('faf8f2a55158f6e7e9a457c47fb7711c'), after: B('faf8f2a55158f6e7e9a457c47fb7711c'), email: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      stat: B('faf8f2a55158f6e7e9a457c47fb7711c'), apparel: B('faf8f2a55158f6e7e9a457c47fb7711c'), merch: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      tote: B('faf8f2a55158f6e7e9a457c47fb7711c'), dash: B('faf8f2a55158f6e7e9a457c47fb7711c'), iso: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      recep: B('faf8f2a55158f6e7e9a457c47fb7711c'), p46: B('faf8f2a55158f6e7e9a457c47fb7711c'), p47: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      p48: B('faf8f2a55158f6e7e9a457c47fb7711c'), p49: B('faf8f2a55158f6e7e9a457c47fb7711c'), p50: B('faf8f2a55158f6e7e9a457c47fb7711c'),
+      p51: B('faf8f2a55158f6e7e9a457c47fb7711c'), ndl: B('50800920ac96316ba50fdfc836ba7bee'), ndi: B('7dbab6a04435c6e619bc696d002e1bd9')
+    };
+    const v = { I };
+    v.glyphA = this.refA; v.glyphB = this.refB;
+    v.tick = m ? 'gTick 40s linear infinite' : 'none';
+    v.tickSlow = m ? 'gTick 50s linear infinite' : 'none';
+    v.blink = m ? 'gBlink 1s step-end infinite' : 'none';
+    v.pulse = m ? 'gPulse 1.6s ease-out infinite' : 'none';
+    v.bob = m ? 'gBob 3s ease-in-out infinite alternate' : 'none';
+    v.bobSlow = m ? 'gBob 4.2s ease-in-out infinite alternate' : 'none';
+    v.spin = m ? 'gSpin 20s linear infinite' : 'none';
+    v.halo = m ? 'gHalo 3s ease-in-out infinite alternate' : 'none';
+    v.dash = m ? 'gDash 1.6s linear infinite' : 'none';
+    v.travel = m ? 'gTravel 4s cubic-bezier(.16,1,.3,1) infinite' : 'none';
+
+    v.strip = ['Logo design', 'Branding', 'Flyers', 'Banners', 'UI/UX design', 'Social media marketing', 'Sales funnels', 'Pitch decks', 'And much more'];
+    v.strip2 = [0, 1];
+
+    v.stats = [
+      { n: '24h', lc: '#C4D3CC', bg: 'transparent', l: 'Delivery on most requests', c: '#FFFFFF', bl: 'none', ib: 'rgba(255,255,255,0.08)', is: '#D4F27A', icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM12 7v5l3 2' },
+      { n: '41', l: 'Design services', c: '#111111', lc: '#1A4239', bg: '#D4F27A', bl: '1px solid #D4F27A', ib: '#12332D', is: '#D4F27A', icon: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z' },
+      { n: '∞', lc: '#C4D3CC', bg: 'transparent', l: 'Requests and revisions', c: '#FFFFFF', bl: '1px solid rgba(255,255,255,0.10)', ib: 'rgba(255,255,255,0.08)', is: '#D4F27A', icon: 'M4 12a4 4 0 0 1 8 0a4 4 0 0 0 8 0a4 4 0 0 0-8 0a4 4 0 0 1-8 0' },
+      { n: '$79', lc: '#C4D3CC', bg: 'transparent', l: 'A month on the annual plan', c: '#FFFFFF', bl: '1px solid rgba(255,255,255,0.10)', ib: 'rgba(255,255,255,0.08)', is: '#D4F27A', icon: 'M12 3v18M17 7H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6' }
+    ];
+
+    const dark = { kc: '#FFFFFF', kb: 'rgba(18,51,45,0.6)', nc: 'rgba(255,255,255,0.75)', tc: '#FFFFFF', ab: 'rgba(255,255,255,0.14)', as: '#FFFFFF' };
+    v.svc = [
+      { no: '01', name: 'UI/UX design', k: 'Apps · Web', img: I.dash, pos: '50% 50%', cs: 2, rs: 2, bg: '#173B34', fs: '30px', floaters: true, ...dark },
+      { no: '02', name: 'Branding', k: 'Identity', img: I.stat, pos: '50% 50%', cs: 1, rs: 1, bg: '#173B34', fs: '22px', ...dark },
+      { no: '03', name: 'Logo design', k: 'Marks', img: '', icon: I.ndi, cs: 1, rs: 1, bg: '#D4F27A', fs: '22px', kc: '#111111', kb: 'rgba(255,255,255,0.55)', nc: '#1A4239', tc: '#111111', ab: '#12332D', as: '#D4F27A' },
+      { no: '04', name: 'Social media', k: 'Posts · Stories', img: I.p51, pos: '50% 30%', cs: 1, rs: 1, bg: '#173B34', fs: '22px', ...dark },
+      { no: '05', name: 'Flyers', k: 'Print', img: I.after, pos: '50% 50%', cs: 1, rs: 1, bg: '#173B34', fs: '22px', ...dark },
+      { no: '06', name: 'Banners and ads', k: 'Display · Social', img: I.stride, pos: '50% 50%', cs: 2, rs: 1, bg: '#173B34', fs: '22px', ...dark },
+      { no: '07', name: 'Sales funnels', k: 'Pages · Email', img: I.email, pos: '50% 50%', cs: 1, rs: 1, bg: '#173B34', fs: '22px', ...dark },
+      { no: '08', name: 'Pitch decks', k: 'Slides', img: I.p49, pos: '50% 30%', cs: 1, rs: 1, bg: '#173B34', fs: '22px', ...dark }
+    ];
+    v.more = ['Landing pages', 'Packaging', 'Merch', 'Stationery', 'Email design', 'Signage', 'Menus', 'Presentations'];
+    v.more2 = [0, 1];
+
+    const F = ['All', 'Branding', 'UI/UX', 'Social', 'Print'];
+    const W = [
+      { name: 'Bun Club', cat: 'Website', f: 'UI/UX', img: I.bun, pos: '50% 50%' },
+      { name: 'Studio stationery', cat: 'Branding', f: 'Branding', img: I.stat, pos: '50% 50%' },
+      { name: 'Tee and hoodie', cat: 'Merch', f: 'Branding', img: I.apparel, pos: '50% 50%' },
+      { name: 'Stride', cat: 'Ad campaign', f: 'Print', img: I.stride, pos: '50% 50%' },
+      { name: 'Montra', cat: 'App UI', f: 'UI/UX', img: I.montra, pos: '50% 50%' },
+      { name: 'Oatform', cat: 'Packaging', f: 'Branding', img: I.oat, pos: '50% 50%' },
+      { name: 'Index', cat: 'Dashboard', f: 'UI/UX', img: I.dash, pos: '50% 50%' },
+      { name: 'After Hours', cat: 'Billboard', f: 'Print', img: I.after, pos: '50% 50%' },
+      { name: 'How it works carousel', cat: 'Social', f: 'Social', img: I.p50, pos: '50% 30%' },
+      { name: 'Merch kit', cat: 'Merch', f: 'Branding', img: I.merch, pos: '50% 50%' },
+      { name: 'Reception signage', cat: 'Print', f: 'Print', img: I.recep, pos: '50% 50%' },
+      { name: 'Launch carousel', cat: 'Social', f: 'Social', img: I.p48, pos: '50% 30%' }
+    ];
+    const pickF = F[st.filter];
+    const list = pickF === 'All' ? W : W.filter((w) => w.f === pickF);
+    v.filters = F.map((label, i) => {
+      const on = st.filter === i;
+      const count = label === 'All' ? W.length : W.filter((w) => w.f === label).length;
+      return { label, count: String(count), on: on ? 'true' : 'false', bg: on ? '#D4F27A' : 'transparent', fg: on ? '#111111' : '#E6ECE8',
+        cb: on ? '#111111' : 'rgba(255,255,255,0.10)', cc: on ? '#D4F27A' : '#C4D3CC', pick: () => this.setState({ filter: i }) };
+    });
+    const total = String(list.length).padStart(2, '0');
+    v.work = list.slice(0, 6).map((w, i) => ({ ...w, no: String(i + 1).padStart(2, '0') + ' / ' + total }));
+
+    const CS = [
+      { k: 'Branding', tag: 'Identity', t: 'Studio stationery', s: 'from one short brief', s2: 'kit', img: I.stat, thumbs: [I.stat, I.merch, I.apparel] },
+      { k: 'Website', tag: 'Restaurant', t: 'Bun Club', s: 'site with online ordering', s2: 'website', img: I.bun, thumbs: [I.bun, I.p47, I.after] },
+      { k: 'App UI', tag: 'Fintech', t: 'Montra', s: 'a calmer finance app', s2: 'finance app', img: I.montra, thumbs: [I.montra, I.dash, I.email] },
+      { k: 'Ad campaign', tag: 'Launch', t: 'Stride', s: 'launch ads for a running shoe', s2: 'launch ads', img: I.stride, thumbs: [I.stride, I.p48, I.iso] },
+      { k: 'Packaging', tag: 'Product', t: 'Oatform', s: 'packaging made for the shelf', s2: 'packaging', img: I.oat, thumbs: [I.oat, I.tote, I.recep] },
+      { k: 'Dashboard', tag: 'SaaS', t: 'Index', s: 'a calmer way to plan the week', s2: 'dashboard', img: I.dash, thumbs: [I.dash, I.montra, I.email] }
+    ];
+    const ci = st.cs, dir = st.csDir || 1;
+    const mod = (n) => ((n % 6) + 6) % 6;
+    v.csThumb = CS[mod(ci + 1)].img;
+    v.csCards = CS.map((c, i) => {
+      let p = mod(i - ci - 1); if (p > 3) p -= 6;           // slots -2..3, 0 = centre
+      const wrap = (dir > 0 && p === 3) || (dir < 0 && p === -2);
+      const centre = p === 0;
+      return { ...c,
+        left: (720 - 204 + p * 426) + 'px',
+        y: centre ? '-90px' : '0px',
+        tr: wrap ? 'none' : 'left 1s cubic-bezier(.65,0,.35,1), transform .9s cubic-bezier(.16,1,.3,1) ' + (centre ? '.55s' : '0s'),
+        z: centre ? 3 : 1,
+        sh: centre ? 'none' : 'none',
+        sc: centre ? '1' : '1.08',
+        oC: centre ? 1 : 0, oR: p === 1 ? 1 : 0, oD: p === -1 ? 1 : 0,
+        tyR: p === 1 ? '0px' : '24px', tyC: centre ? '0px' : '20px',
+        dl: centre || p === 1 || p === -1 ? '.6s' : '0s', dlC: centre ? '1.2s' : '0s' };
+    });
+    v.csPct = Math.round((mod(ci) + 1) / 6 * 100) + '%';
+    v.scols = [
+      { an: m ? 'gColU 30s linear infinite' : 'none', mt: '80px', items: [I.p47, I.p50, I.p48, I.p47, I.p50, I.p48] },
+      { an: m ? 'gColD 30s linear infinite' : 'none', mt: '-40px', items: [I.p48, I.p51, I.p49, I.p48, I.p51, I.p49] },
+      { an: m ? 'gColU 34s linear infinite' : 'none', mt: '40px', items: [I.p49, I.p50, I.p47, I.p49, I.p50, I.p47] }
+    ];
+    v.ftags = [
+      { t: 'Flyers', x: '500px', y: '-52px', r: '-4deg', bg: 'rgba(243,227,207,0.92)', bd: 'rgba(255,255,255,0.7)', gl: 'rgba(243,190,120,0.55)', fg: '#3A2A12', an: m ? 'gTagBob 6.1s ease-in-out infinite, gTagOut0 6s cubic-bezier(.16,1,.3,1) 0.25s infinite both' : 'none' },
+      { t: 'Branding', x: '90px', y: '-28px', r: '-12deg', bg: 'rgba(212,242,122,0.92)', bd: 'rgba(255,255,255,0.7)', gl: 'rgba(212,242,122,0.6)', fg: '#111111', an: m ? 'gTagBob 5.4s ease-in-out infinite, gTagOut1 6s cubic-bezier(.16,1,.3,1) 0.35s infinite both' : 'none' },
+      { t: 'Logos', x: '960px', y: '-8px', r: '14deg', bg: 'rgba(247,221,241,0.92)', bd: 'rgba(255,255,255,0.7)', gl: 'rgba(240,150,220,0.55)', fg: '#3D1235', an: m ? 'gTagBob 6.8s ease-in-out infinite, gTagOut2 6s cubic-bezier(.16,1,.3,1) 0.45s infinite both' : 'none' },
+      { t: 'Social media', x: '80px', y: '166px', r: '-8deg', bg: 'rgba(225,236,248,0.92)', bd: 'rgba(255,255,255,0.7)', gl: 'rgba(120,200,255,0.55)', fg: '#0F2A44', an: m ? 'gTagBob 5.8s ease-in-out infinite, gTagOut3 6s cubic-bezier(.16,1,.3,1) 0.55s infinite both' : 'none' },
+      { t: 'Pitch decks', x: '900px', y: '178px', r: '10deg', bg: 'rgba(232,227,248,0.92)', bd: 'rgba(255,255,255,0.7)', gl: 'rgba(170,140,255,0.55)', fg: '#231650', an: m ? 'gTagBob 6.5s ease-in-out infinite, gTagOut4 6s cubic-bezier(.16,1,.3,1) 0.65s infinite both' : 'none' }
+    ];
+    const pop = (i) => m ? 'gPop' + i + ' 6s cubic-bezier(.16,1,.3,1) ' + (i * 0.12) + 's infinite both' : 'none';
+    v.fan = [
+      { img: I.p49, x: '-280px', y: '-20px', r: '-16deg', an: pop(0) },
+      { img: I.p47, x: '-142px', y: '-70px', r: '-8deg', an: pop(1) },
+      { img: I.p51, x: '0px', y: '-100px', r: '0deg', an: pop(2) },
+      { img: I.p48, x: '142px', y: '-70px', r: '8deg', an: pop(3) },
+      { img: I.p50, x: '280px', y: '-20px', r: '16deg', an: pop(4) }
+    ];
+    v.kitThumbs = [I.bun, I.stride, I.montra, I.stat].map((img, i) => ({ img, an: m ? 'gThumb 2.8s ease-in-out ' + (i * 0.35) + 's infinite alternate' : 'none' }));
+    v.swatches = ['#131514', '#12332D', '#2A564D', '#D4F27A', '#F4F3EF', '#FFFFFF'].map((c, i) => ({ c, an: m ? 'gSw 3.6s cubic-bezier(.16,1,.3,1) ' + (i * 0.12) + 's infinite' : 'none' }));
+    v.barGlow = m ? 'gBar 3.6s ease-in-out infinite' : 'none';
+    v.pulseG = m ? 'gPulseG 1.8s ease-out infinite' : 'none';
+    v.csNext = () => this.setState((s) => ({ cs: s.cs + 1, csDir: 1 }));
+    v.csPrev = () => this.setState((s) => ({ cs: s.cs - 1, csDir: -1 }));
+    v.ndl = I.ndl;
+
+    const s = st.secs; const p2 = (n) => String(n).padStart(2, '0');
+    v.timeShort = Math.floor(s / 3600) + 'h ' + p2(Math.floor((s % 3600) / 60)) + 'm';
+    const pct = Math.min(100, Math.max(3, Math.round((1 - s / 86400) * 100)));
+    v.progressPct = pct + '%';
+    v.steps2 = [
+      { t: 'Brief received', c: '#FFFFFF', b: '#D4F27A' },
+      { t: 'First concepts', c: pct > 40 ? '#FFFFFF' : '#9FB5AC', b: pct > 40 ? '#D4F27A' : 'rgba(255,255,255,0.12)' },
+      { t: 'Ready for review', c: pct > 80 ? '#FFFFFF' : '#9FB5AC', b: pct > 80 ? '#D4F27A' : 'rgba(255,255,255,0.12)' }
+    ];
+    v.railRun = m ? 'gRail 3s cubic-bezier(.65,0,.35,1) infinite' : 'none';
+    const ring = (d) => m ? 'gRing 2.4s ease-out ' + d + 's infinite' : 'none';
+    v.steps = [
+      { n: '01', cx: '16.66%', ring: ring(0), icon: 'M4 20h4L19 9l-4-4L4 16zM14 6l4 4', t: 'Tell us what you need', d: 'Write a request in your dashboard · A line is enough to start', s1: true },
+      { n: '02', cx: '50%', ring: ring(0.8), icon: 'M12 3l2.2 5.6L20 11l-5.8 2.4L12 19l-2.2-5.6L4 11l5.8-2.4z', t: 'A designer gets to work', d: 'Your request is picked up and designed · You can follow along as it moves', s2: true },
+      { n: '03', cx: '83.33%', ring: ring(1.6), icon: 'M5 12l5 5 9-10', t: 'Review · Refine · Ready', d: 'Ask for changes as many times as you like · Download the files when it\u2019s right', s3: true }
+    ];
+
+    v.baFacts = [
+      { k: 'Request', v: 'Restaurant website', bb: '1px solid rgba(255,255,255,0.10)', icon: 'M5 4h14v16H5zM9 9h6M9 13h6' },
+      { k: 'Delivered', v: 'Homepage, menu, ordering', bb: '1px solid rgba(255,255,255,0.10)', icon: 'M5 12l5 5 9-10' },
+      { k: 'Revisions', v: 'Unlimited', bb: 'none', icon: 'M4 12a4 4 0 0 1 8 0a4 4 0 0 0 8 0a4 4 0 0 0-8 0a4 4 0 0 1-8 0' }
+    ];
+    const f = st.ba / 100;
+    v.baVal = String(st.ba);
+    v.onBA = this.onBA;
+    v.baLeft = 'calc(28px + (100% - 56px) * ' + f + ')';
+    v.baClip = 'inset(0 calc(100% - 28px - (100% - 56px) * ' + f + ') 0 0)';
+    v.baText = st.ba + '% brief, ' + (100 - st.ba) + '% delivered';
+    v.sec = __sec;
+    return v;
+  }
+}
+</script>
+</body>
+</html>

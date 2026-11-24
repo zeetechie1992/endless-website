@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endless sitemap</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300..500&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+.sm-code{font-family:'Google Sans Code',ui-monospace,monospace;letter-spacing:0.02em}
+.sm-cap{font-family:'Google Sans Code',ui-monospace,monospace;font-size:13px;letter-spacing:0.14em;text-transform:uppercase}
+</style>
+</helmet>
+<div style="width: 2400px; box-sizing: border-box; padding: 96px 80px 112px; background-color: #F4F3EF; background-image: linear-gradient(rgba(19,21,20,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(19,21,20,0.035) 1px, transparent 1px); background-size: 80px 80px; font-family: 'Google Sans Flex', 'Google Sans', system-ui, sans-serif; color: #131514; -webkit-font-smoothing: antialiased">
+
+  <!-- Header -->
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <span class="sm-cap" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; height: 44px; padding: 0 20px 0 6px; border-radius: 999px; background: #D4F27A; color: #12332D"><span style="width: 32px; height: 32px; border-radius: 99px; background: #12332D; display: flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.3 6.9 6.9 2.6-6.9 2.6L12 21.5l-2.3-6.9L2.8 12l6.9-2.6z" fill="#D4F27A"></path></svg></span>Website map</span>
+      <h1 style="margin: 0; font-size: 96px; line-height: 1; font-weight: 400; letter-spacing: -0.045em">Endless sitemap<br><span style="color: #2F7A4A">Every page, every service</span></h1>
+    </div>
+    <div style="display: flex; gap: 16px">
+      <sc-for list="{{ stats }}" as="s">
+        <div style="width: 200px; box-sizing: border-box; padding: 24px; border-radius: 28px; background: {{ s.bg }}; color: {{ s.fg }}">
+          <div style="font-size: 64px; line-height: 1; letter-spacing: -0.05em">{{ s.n }}</div>
+          <div style="margin-top: 10px; font-size: 16px; line-height: 1.35; color: {{ s.lc }}">{{ s.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div style="margin-top: 48px; display: flex; align-items: center; gap: 28px; font-size: 15px; color: #576059">
+    <span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 18px; height: 18px; border-radius: 6px; background: #12332D"></span>Main navigation</span>
+    <span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 18px; height: 18px; border-radius: 6px; background: #D4F27A"></span>Service category (mega menu column)</span>
+    <span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 18px; height: 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid rgba(19,21,20,0.14); box-sizing: border-box"></span>Sub-service page (template)</span>
+    <span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 18px; height: 18px; border-radius: 6px; border: 1.5px dashed #9FB5AC; box-sizing: border-box"></span>Repeating page (one template, many pages)</span>
+  </div>
+
+  <!-- Home -->
+  <div style="margin-top: 72px; display: flex; flex-direction: column; align-items: center">
+    <div style="display: inline-flex; align-items: center; gap: 16px; height: 76px; padding: 0 32px 0 12px; border-radius: 26px; background: #12332D; color: #FFFFFF">
+      <span style="width: 52px; height: 52px; border-radius: 16px; background: #D4F27A; display: flex; align-items: center; justify-content: center"><svg width="30" height="16" viewBox="0 0 600 300" aria-hidden="true"><path d="M300 150C340 90 380 60 440 60C510 60 550 105 550 150C550 195 510 240 440 240C380 240 340 210 300 150C260 90 220 60 160 60C90 60 50 105 50 150C50 195 90 240 160 240C220 240 260 210 300 150Z" fill="none" stroke="#12332D" stroke-width="56"></path></svg></span>
+      <span style="font-size: 26px; letter-spacing: -0.03em">Home</span>
+      <span class="sm-code" style="font-size: 14px; color: #9FB5AC">/</span>
+    </div>
+    <div style="width: 2px; height: 40px; background: #12332D"></div>
+  </div>
+
+  <!-- Main navigation row -->
+  <div style="position: relative">
+    <div style="position: absolute; left: 112px; right: 112px; top: 0; height: 2px; background: #12332D"></div>
+    <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{ nav }}" as="p">
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <div style="width: 2px; height: 32px; background: #12332D"></div>
+          <div style="width: 100%; box-sizing: border-box; padding: 20px 20px 18px; border-radius: 22px; background: #12332D; color: #FFFFFF; min-height: 112px">
+            <div style="font-size: 22px; letter-spacing: -0.025em">{{ p.t }}</div>
+            <div class="sm-code" style="margin-top: 6px; font-size: 13px; color: #D4F27A">{{ p.u }}</div>
+            <div style="margin-top: 10px; font-size: 13px; line-height: 1.4; color: #C4D3CC">{{ p.d }}</div>
+            <sc-if value="{{ p.st }}"><span style="margin-top: 12px; display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #D4F27A; color: #12332D; font-size: 12px"><span style="width: 6px; height: 6px; border-radius: 99px; background: #12332D"></span>{{ p.st }}</span></sc-if>
+          </div>
+          <sc-for list="{{ p.subs }}" as="s">
+            <div style="width: 2px; height: 16px; background: #9FB5AC"></div>
+            <div style="width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 18px; border: 1.5px {{ s.b }} #9FB5AC; background: {{ s.bg }}">
+              <div style="font-size: 15px">{{ s.t }}</div>
+              <div class="sm-code" style="margin-top: 4px; font-size: 12px; color: #576059">{{ s.u }}</div>
+              <sc-if value="{{ s.d }}"><div style="margin-top: 6px; font-size: 12px; line-height: 1.4; color: #576059">{{ s.d }}</div></sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- Services: mega menu columns -->
+  <div style="margin-top: 96px; display: flex; align-items: flex-end; justify-content: space-between; gap: 48px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <span class="sm-cap" style="color: #2F7A4A">Services · /services</span>
+      <h2 style="margin: 0; font-size: 72px; line-height: 1.02; font-weight: 400; letter-spacing: -0.04em">7 categories<br><span style="color: #2F7A4A">41 service pages</span></h2>
+    </div>
+    <p style="margin: 0; max-width: 620px; font-size: 19px; line-height: 1.55; color: #576059">Each category is a column in the mega menu and has its own page. Each sub-service under it is a page built from the same template, so every service explains what it is, why it matters, how it works, pricing and reviews</p>
+  </div>
+
+  <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px; align-items: start">
+    <sc-for list="{{ cats }}" as="c">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="box-sizing: border-box; padding: 22px 22px 20px; border-radius: 24px; background: #D4F27A; color: #12332D">
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <span class="sm-code" style="font-size: 13px">{{ c.n }}</span>
+            <span style="height: 26px; padding: 0 10px; border-radius: 999px; background: #12332D; color: #D4F27A; font-size: 13px; display: inline-flex; align-items: center">{{ c.count }}</span>
+          </div>
+          <div style="margin-top: 18px; font-size: 26px; line-height: 1.1; letter-spacing: -0.03em">{{ c.t }}</div>
+          <div class="sm-code" style="margin-top: 8px; font-size: 12px; color: #1A4239">{{ c.u }}</div>
+          <div style="margin-top: 12px; font-size: 14px; line-height: 1.45; color: #1A4239">{{ c.d }}</div>
+        </div>
+        <sc-for list="{{ c.items }}" as="i">
+          <div style="box-sizing: border-box; padding: 14px 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid rgba(19,21,20,0.10)">
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 16px; letter-spacing: -0.01em"><span style="width: 7px; height: 7px; flex: 0 0 7px; border-radius: 99px; background: #2F7A4A"></span>{{ i.t }}</div>
+            <div class="sm-code" style="margin-top: 5px; padding-left: 17px; font-size: 12px; color: #576059">{{ i.u }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- Supporting pages -->
+  <div style="margin-top: 96px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+    <sc-for list="{{ groups }}" as="g">
+      <div style="box-sizing: border-box; padding: 28px; border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(19,21,20,0.08)">
+        <span class="sm-cap" style="color: #2F7A4A">{{ g.t }}</span>
+        <div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #576059">{{ g.d }}</div>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <sc-for list="{{ g.items }}" as="i">
+            <div style="box-sizing: border-box; padding: 12px 14px; border-radius: 14px; background: #F4F3EF">
+              <div style="font-size: 15px">{{ i.t }}</div>
+              <div class="sm-code" style="margin-top: 4px; font-size: 12px; color: #576059">{{ i.u }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- Service page template -->
+  <div style="margin-top: 96px; box-sizing: border-box; padding: 64px; border-radius: 48px; background: #12332D; color: #FFFFFF">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <span class="sm-cap" style="color: #D4F27A">Service page template</span>
+        <h2 style="margin: 0; font-size: 72px; line-height: 1.02; font-weight: 400; letter-spacing: -0.04em">One template<br><span style="color: #D4F27A">48 pages</span></h2>
+      </div>
+      <p style="margin: 0; max-width: 640px; font-size: 19px; line-height: 1.55; color: #C4D3CC">Category pages and sub-service pages share these sections in this order. Category pages add a grid of their sub-services after the hero. Example: Website design → E-commerce design</p>
+    </div>
+
+    <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{ tpl }}" as="s">
+        <div style="box-sizing: border-box; padding: 22px; border-radius: 22px; background: {{ s.bg }}; color: {{ s.fg }}; min-height: 196px">
+          <div style="display: flex; align-items: center; justify-content: space-between"><span class="sm-code" style="font-size: 13px; color: {{ s.nc }}">{{ s.n }}</span><sc-if value="{{ s.tag }}"><span style="height: 24px; padding: 0 10px; border-radius: 999px; background: #12332D; color: #D4F27A; font-size: 12px; display: inline-flex; align-items: center">{{ s.tag }}</span></sc-if></div>
+          <div style="margin-top: 16px; font-size: 22px; line-height: 1.15; letter-spacing: -0.025em">{{ s.t }}</div>
+          <div style="margin-top: 10px; font-size: 14px; line-height: 1.45; color: {{ s.dc }}">{{ s.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- process graphic used on every service page -->
+    <div style="margin-top: 32px; box-sizing: border-box; padding: 32px; border-radius: 28px; background: #1A4239">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px">
+        <span class="sm-cap" style="color: #9FB5AC">Process graphic, shown on every service page</span>
+        <span style="font-size: 15px; color: #C4D3CC">Example below uses E-commerce design</span>
+      </div>
+      <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+        <sc-for list="{{ steps }}" as="s">
+          <div style="position: relative; box-sizing: border-box; padding: 22px; border-radius: 20px; background: {{ s.bg }}; color: {{ s.fg }}">
+            <div style="display: flex; align-items: center; gap: 12px"><span style="width: 34px; height: 34px; border-radius: 11px; background: {{ s.ib }}; color: {{ s.ic }}; display: flex; align-items: center; justify-content: center; font-family: 'Google Sans Code', monospace; font-size: 13px">{{ s.n }}</span><span style="font-size: 20px; letter-spacing: -0.02em">{{ s.t }}</span></div>
+            <div style="margin-top: 12px; font-size: 14px; line-height: 1.45; color: {{ s.dc }}">{{ s.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":2400,"height":4020}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = {};
+    v.stats = [
+      { n: '7', l: 'Service categories in the mega menu', bg: '#12332D', fg: '#FFFFFF', lc: '#C4D3CC' },
+      { n: '41', l: 'Sub-service pages, one template', bg: '#D4F27A', fg: '#12332D', lc: '#1A4239' },
+      { n: '72', l: 'Pages in total, plus case studies and posts', bg: '#FFFFFF', fg: '#131514', lc: '#576059' }
+    ];
+    const sub = (t, u, d, rep) => ({ t, u, d: d || '', b: rep ? 'dashed' : 'solid', bg: rep ? 'rgba(255,255,255,0.6)' : '#FFFFFF' });
+    const D = 'Designed';
+    v.nav = [
+      { t: 'Services', u: '/services', d: 'Mega menu with 7 categories · Hub lists all 41 services with their category', st: D },
+      { t: 'Work', u: '/work', d: 'Choose a view first: fast latest work or deep case studies', st: D, subs: [
+        sub('Latest work', '/work/latest', 'Long scroll · one client, info and three shots each · more loads as you scroll'),
+        sub('Case studies', '/work/case-studies', 'Featured study, filters, grid of studies'),
+        sub('Case study pages', '/work/[project]', 'Template: brief, process, gallery, results, quote, next study', true)] },
+      { t: 'How it works', u: '/how-it-works', d: 'Video tour half in the hero · 3 steps with screens · dashboard screenshots · FAQ', st: D },
+      { t: 'Pricing', u: '/pricing', d: 'Plan card, Endless vs freelancer, agency and in-house · savings calculator · FAQ', st: D },
+      { t: 'Reviews', u: '/reviews', d: 'Every verified review · what clients loved · filters, video reviews, load more', st: D },
+      { t: 'About', u: '/about', d: 'Story behind Endless, office photos, brand guide pages, founders and the whole team by name', st: D },
+      { t: 'FAQ and support', u: '/faq', d: 'One help page: search, 38 answers in 7 topics, chat, email, call', st: D },
+      { t: 'Blog', u: '/blog', d: 'Guides and articles for organic search', st: D, subs: [sub('Article pages', '/blog/[post]', '', true)] },
+      { t: 'Contact', u: '/contact', d: 'Form plus email, client and call options', st: D },
+      { t: 'Book a call', u: '/book-a-call', d: '20-minute walkthrough with a calendar picker', st: D }
+    ];
+    const S = (cat, items) => items.map(([t, slug]) => ({ t, u: '…/' + slug }));
+    v.cats = [
+      { n: '01', t: 'Branding', u: '/services/branding', d: 'How a business looks everywhere', items: S('brand-identity', [['Logo design', 'logo-design'], ['Brand identity and guidelines', 'brand-guidelines'], ['Brand refresh', 'brand-refresh'], ['Stationery and business cards', 'stationery'], ['Icons and illustrations', 'icons-illustrations']]) },
+      { n: '02', t: 'Website Design', u: '/services/website-design', d: 'Sites that look right and convert', items: S('website-design', [['E-commerce design', 'ecommerce'], ['Landing pages', 'landing-pages'], ['Business websites', 'business-websites'], ['Portfolio websites', 'portfolio-websites'], ['Personal websites', 'personal-websites'], ['SaaS websites', 'saas-websites'], ['Website redesign', 'redesign'], ['Blog and content sites', 'blog-sites']]) },
+      { n: '03', t: 'UI/UX and Product', u: '/services/ui-ux-design', d: 'Apps and products people enjoy using', items: S('ui-ux-design', [['Mobile app design', 'mobile-app-design'], ['MVP design', 'mvp-design']]) },
+      { n: '04', t: 'Marketing and Ads', u: '/services/marketing-design', d: 'Creative that brings in customers', items: S('marketing-design', [['Social media ads', 'social-ads'], ['Display and banner ads', 'banner-ads'], ['Sales funnels', 'sales-funnels'], ['Email design', 'email-design'], ['Newsletters', 'newsletters'], ['Ad campaigns', 'ad-campaigns'], ['Billboards and out-of-home', 'billboards']]) },
+      { n: '05', t: 'Social Media', u: '/services/social-media-design', d: 'Content for every feed, every week', items: S('social-media-design', [['Social posts', 'social-posts'], ['Carousels', 'carousels'], ['Stories and reel covers', 'stories'], ['Profile and cover banners', 'banners'], ['YouTube thumbnails', 'youtube-thumbnails'], ['Social media kits', 'social-kits']]) },
+      { n: '06', t: 'Presentations and Documents', u: '/services/presentation-design', d: 'Decks and documents that win deals', items: S('presentation-design', [['Pitch decks', 'pitch-decks'], ['Sales decks', 'sales-decks'], ['Company profiles', 'company-profiles'], ['eBooks and lead magnets', 'ebooks'], ['Reports and whitepapers', 'reports'], ['Infographics', 'infographics'], ['One-pagers and case studies', 'one-pagers']]) },
+      { n: '07', t: 'Print and Packaging', u: '/services/print-packaging', d: 'Designs people can hold', items: S('print-packaging', [['Flyers and brochures', 'flyers-brochures'], ['Posters', 'posters'], ['Menus', 'menus'], ['Packaging and labels', 'packaging'], ['Merch', 'merch'], ['Signage and trade show', 'signage']]) }
+    ];
+    v.cats.forEach((c) => { c.count = c.items.length + ' pages'; });
+    v.groups = [
+      { t: 'Templates designed', d: 'Each one is reused for every page of its kind', items: [{ t: 'Category · Branding', u: '/services/branding' }, { t: 'Service · Logo design', u: '…/logo-design' }, { t: 'Case study · Bun Club', u: '/work/bun-club' }, { t: 'Blog article', u: '/blog/[post] · next' }] },
+      { t: 'Compare', d: 'Pages that answer "why Endless instead of…" for search and ads', items: [{ t: 'vs freelancers', u: '/compare/freelancers' }, { t: 'vs agencies', u: '/compare/agencies' }, { t: 'vs in-house designer', u: '/compare/in-house' }] },
+      { t: 'Account', d: 'Signup flow and the client dashboard', items: [{ t: 'Start free trial', u: '/signup' }, { t: 'Log in', u: '/login' }, { t: 'Welcome, create first brand', u: '/welcome' }, { t: 'Dashboard', u: 'app subdomain' }] },
+      { t: 'Legal and system', d: 'Footer links and utility pages', items: [{ t: 'Terms', u: '/terms' }, { t: 'Privacy', u: '/privacy' }, { t: 'Refunds and cancelling', u: '/refunds' }, { t: 'Cookies', u: '/cookies' }, { t: 'Page not found', u: '/404' }] }
+    ];
+    const dark = { bg: '#1A4239', fg: '#FFFFFF', nc: '#9FB5AC', dc: '#C4D3CC' };
+    const lime = { bg: '#D4F27A', fg: '#12332D', nc: '#1A4239', dc: '#1A4239' };
+    v.tpl = [
+      { n: '01', t: 'Hero', d: 'H1 with the service name, one-line promise, trial CTA, proof pill, example visual', ...lime },
+      { n: '02', t: 'What it is', d: 'What this service covers and who it is for, in plain words', ...dark },
+      { n: '03', t: 'What you get', d: 'Deliverables grid: formats, sizes, source files, revisions', ...dark },
+      { n: '04', t: 'Why it matters', d: 'Three reasons with numbers, e.g. why a store needs a strong product page', ...dark },
+      { n: '05', t: 'How it works', d: 'The 5-step process graphic below, written for this service', tag: 'Graphic', ...lime },
+      { n: '06', t: 'Examples', d: 'Work gallery filtered to this service, links to case studies', ...dark },
+      { n: '07', t: 'Pricing', d: 'Same plan card: annual and monthly, 3 free days, savings line', tag: 'Pricing', ...lime },
+      { n: '08', t: 'Testimonials', d: 'Reviews from clients who used this service', tag: 'Proof', ...lime },
+      { n: '09', t: 'FAQ', d: 'Five to eight questions specific to this service', ...dark },
+      { n: '10', t: 'Related services', d: 'Sibling sub-services in the same category, then other categories', ...dark },
+      { n: '11', t: 'Final CTA', d: 'Start the free trial, or book a call', ...dark },
+      { n: '12', t: 'Footer', d: 'Full service list, company links, legal', ...dark }
+    ];
+    const st = { bg: '#12332D', fg: '#FFFFFF', ib: '#D4F27A', ic: '#12332D', dc: '#C4D3CC' };
+    v.steps = [
+      { n: '01', t: 'Request', d: 'Write what you need in the dashboard: "a product page for our new range"', ...st },
+      { n: '02', t: 'Picked up', d: 'A designer who knows your brand starts on it', ...st },
+      { n: '03', t: 'First design', d: 'Most requests are delivered within 24 hours', bg: '#D4F27A', fg: '#12332D', ib: '#12332D', ic: '#D4F27A', dc: '#1A4239' },
+      { n: '04', t: 'Refine', d: 'Ask for changes as many times as you like', ...st },
+      { n: '05', t: 'Final files', d: 'Download every file, every size, saved in your brand kit', ...st }
+    ];
+    return v;
+  }
+}
+</script>
+</body>
+</html>

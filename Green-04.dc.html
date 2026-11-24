@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endless home page, green, Footer</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300..500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code&amp;display=swap">
+<style>
+body{margin:0;background:#12332D}
+a{color:inherit}
+button{font-family:inherit;color:inherit}
+.g-eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 5px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);font-family:'Google Sans Code',ui-monospace,monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#E6ECE8;white-space:nowrap;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.g-dot{width:24px;height:24px;border-radius:99px;background:#D4F27A;display:flex;align-items:center;justify-content:center}
+.g-eyebrow.l .g-dot{background:#12332D}
+.g-h2 em{font-style:normal;color:#D4F27A}
+.g-h2.p em{color:#2F7A4A;background:none}
+.g-h2{text-wrap:balance}
+.g-vcard .g-play{transition:transform .35s cubic-bezier(.16,1,.3,1)}.g-vcard:hover .g-play{transform:scale(1.1)}
+@keyframes gPlayRing{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.45);opacity:0}}
+.g-tcol>:last-child{flex:1 1 auto}
+@keyframes gTBob{from{translate:0 0}to{translate:0 -7px}}
+.g-tbtn{transition:transform .2s ease,box-shadow .2s ease}.g-tbtn:hover{transform:translateY(-2px);box-shadow:none}
+.g-tcard{box-shadow:none;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease}.g-tcard:hover{transform:translateY(-6px);box-shadow:0 0 0 2px #D4F27A}
+.g-glass{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);box-shadow:none}
+.g-top{transition:transform .3s cubic-bezier(.16,1,.3,1)}.g-top:hover{transform:translateY(-4px)}
+.g-eyebrow.l{background:#FFFFFF;border-color:rgba(19,21,20,0.10);color:#1A4239}
+.g-h2{margin:0;font-size:72px;line-height:1.02;font-weight:400;letter-spacing:-0.04em;color:#FFFFFF}
+.g-lead{margin:0;font-size:19px;line-height:1.55;color:#C4D3CC}
+.g-frame{position:relative;box-sizing:border-box;padding:12px;border-radius:40px;background:#1A4239;box-shadow:none}
+.g-in{position:relative;height:100%;border-radius:29px;overflow:hidden;background:#173B34}
+.g-btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;height:68px;box-sizing:border-box;padding:0 10px 0 28px;border-radius:22px;background:#FFFFFF;color:#1A4239;font-size:18px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap;box-shadow:0 0 0 1px rgba(17,17,17,0.9);transition:background .25s ease,color .25s ease,transform .2s ease}
+.g-btn:hover{background:#1E5A3C;color:#FFFFFF;transform:translateY(-2px)}
+.g-btn .g-chipa{width:48px;height:48px;border-radius:14px;background:#D4F27A;display:flex;align-items:center;justify-content:center;transition:transform .25s ease}
+.g-btn:hover .g-chipa{transform:translateX(3px)}
+.g-btnd{text-decoration:none;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;height:68px;box-sizing:border-box;padding:0 10px 0 28px;border-radius:22px;background:#12332D;color:#FFFFFF;font-size:18px;font-weight:500;white-space:nowrap;transition:background .25s ease,transform .2s ease}
+.g-btnd:hover{background:#1E5A3C;transform:translateY(-2px)}
+.g-btnd .g-chipa{width:48px;height:48px;border-radius:14px;background:#D4F27A;display:flex;align-items:center;justify-content:center}
+.g-range{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:99px;outline:none;cursor:pointer;margin:6px 0}
+.g-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:99px;background:#FFFFFF;box-shadow:0 0 0 6px rgba(212,242,122,0.35);cursor:grab}
+.g-range::-moz-range-thumb{width:28px;height:28px;border:0;border-radius:99px;background:#FFFFFF;box-shadow:0 0 0 6px rgba(212,242,122,0.35)}
+.g-range:focus-visible{outline:2px solid #D4F27A;outline-offset:6px}
+.g-dz{height:48px;flex:1;border:0;border-radius:14px;cursor:pointer;font-size:16px;font-weight:500;transition:background .2s ease,color .2s ease}
+.g-seg{height:48px;padding:0 22px;border:0;border-radius:14px;cursor:pointer;font-size:16px;font-weight:500;display:inline-flex;align-items:center;gap:10px;transition:background .2s ease,color .2s ease}
+.g-faq{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;border:0;background:transparent;cursor:pointer;text-align:left;font-size:21px;letter-spacing:-0.02em;color:#131514}
+.g-faq:hover .g-q{color:#2F7A4A}
+.g-flink{text-decoration:none;color:#C4D3CC;font-size:15px;transition:color .2s ease}
+.g-flink:hover{color:#D4F27A}
+a:focus-visible,button:focus-visible{outline:2px solid #2F7A4A;outline-offset:3px;border-radius:12px}
+@keyframes gSpin{to{transform:rotate(360deg)}}
+@keyframes gBob{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+@keyframes gRise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes gTick{to{transform:translateX(-50%)}}
+@keyframes gUp{to{transform:translateY(-50%)}}
+@keyframes gDownY{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+@keyframes gLap{to{stroke-dashoffset:-1}}
+@keyframes gHalo{from{opacity:.35;transform:scale(.96)}to{opacity:.8;transform:scale(1.03)}}
+@supports (animation-timeline: view()){.g-rise{animation:gRise linear both;animation-timeline:view();animation-range:entry 0% entry 90%}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+
+.g-eyebrow{height:44px !important;padding:0 20px 0 6px !important;gap:12px !important;font-size:15px !important}
+.g-eyebrow .g-dot{width:32px !important;height:32px !important;background:#D4F27A !important}
+.g-eyebrow .g-dot svg{width:14px;height:14px}
+.g-eyebrow .g-dot path{fill:#111111 !important}
+.g-eyebrow{height:46px !important;padding:0 22px 0 7px !important;gap:12px !important;font-size:15px !important;letter-spacing:0.14em !important;background:#D4F27A !important;border:0 !important;color:#12332D !important;box-shadow:none}.g-eyebrow .g-dot{width:32px !important;height:32px !important;background:#12332D !important}.g-eyebrow .g-dot svg{width:14px;height:14px}.g-eyebrow .g-dot path{fill:#D4F27A !important}
+.g-eyebrow{margin-bottom:8px}
+.f5-h{font-size:16px;font-weight:500;color:#FFFFFF;margin-bottom:4px}
+.f5-link{font-size:17px;color:#C4D3CC;text-decoration:none;transition:color .2s ease}
+.f5-link:hover{color:#D4F27A !important}
+.f5-soc,.f5-btn,.f5-top{transition:transform .2s ease}
+.f5-soc:hover,.f5-btn:hover,.f5-top:hover{transform:translateY(-2px)}
+.f5-ghost{transition:background-color .2s ease}
+.f5-ghost:hover{background-color:rgba(255,255,255,0.06)}
+.f5-in::placeholder{color:#9FB5AC}
+.f5-in:focus-visible{border-color:#D4F27A !important}
+@keyframes f5GalSpin{from{transform:rotateY(0deg)}to{transform:rotateY(-360deg)}}
+@keyframes f5MarL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes f5MarR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes f5Lap{to{stroke-dashoffset:-1}}
+@keyframes f5Ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+@media (max-width:900px){.f5 h2{font-size:52px !important}.f5-ctas,.f5-trust,.f5-bar{flex-wrap:wrap}.f5-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.f5-grid>:first-child,.f5-grid>form{grid-column:1/-1}}
+@keyframes gTLoop{to{stroke-dashoffset:-1}}
+@keyframes gCardPop{0%,100%{transform:translateX(var(--x)) translateY(0) rotate(var(--r))}50%{transform:translateX(var(--x)) translateY(-14px) rotate(var(--r))}}
+
+
+/* ---- Enterprise scale: class-level type, buttons, labels ---- */
+.g-h2{font-size:48px;line-height:1.08;letter-spacing:-0.03em}
+.g-lead{font-size:18px;line-height:1.6}
+.g-eyebrow{height:34px !important;padding:0 14px 0 5px !important;gap:10px !important;font-size:12px !important;letter-spacing:0.12em !important}
+.g-eyebrow .g-dot{width:24px !important;height:24px !important}
+.g-eyebrow .g-dot svg{width:11px !important;height:11px !important}
+.bx-eyebrow{height:34px;padding:0 14px 0 5px;gap:10px;font-size:12px;letter-spacing:0.12em}
+.bx-dot{width:24px;height:24px}
+.bx-dot svg{width:11px;height:11px}
+.g-btn,.g-btn2,.g-btnd{height:52px;padding:0 6px 0 22px;gap:12px;border-radius:16px;font-size:16px}
+.g-btn .g-chipa,.g-btnd .g-chipa,.g-btn2 .g-chipb{width:40px;height:40px;border-radius:12px}
+.g-tag{height:36px;padding:0 14px;border-radius:11px;font-size:14px}
+.g-filter{height:40px;font-size:14px}
+.g-ftag{height:38px;padding:0 16px;font-size:12px}
+.g-faq{font-size:18px;padding:22px 0}
+.g-arr{width:36px;height:36px;flex:0 0 36px;border-radius:11px}
+.g-seg{height:44px;font-size:15px}
+.g-dz{height:44px;font-size:15px}
+.f5-link{font-size:16px}
+
+/* ---- QA: shared type + spacing system (responsive) ---- */
+[style*="font-size: 11px"],[style*="font-size: 10px"]{font-size:12px !important}
+@media (max-width:1024px){
+  section[style*="padding: 112px 24px 112px"],section[style*="padding: 112px 0 112px"]{padding-top:96px !important;padding-bottom:96px !important}
+  section[style*="padding: 112px 24px 96px"],section[style*="padding: 96px 24px 96px"]{padding-top:88px !important;padding-bottom:88px !important}
+  section[style*="padding: 112px 24px 0"],section[style*="padding: 96px 24px 0"]{padding-top:88px !important}
+  .g-h2,h2[style*="font-size: 48px"]{font-size:44px !important}
+  h2[style*="font-size: 64px"]{font-size:56px !important}
+}
+@media (max-width:640px){
+  section[style*="padding: 112px 24px 112px"],section[style*="padding: 112px 24px 96px"],section[style*="padding: 96px 24px 96px"]{padding:72px 20px !important}
+  section[style*="padding: 112px 0 112px"]{padding:72px 0 !important}
+  section[style*="padding: 112px 24px 0"],section[style*="padding: 96px 24px 0"]{padding:72px 20px 0 !important}
+  .g-h2,h2[style*="font-size: 48px"]{font-size:34px !important;line-height:1.1 !important;text-wrap:balance}
+  h2[style*="font-size: 64px"]{font-size:40px !important;line-height:1.06 !important;text-wrap:balance}
+  .g-lead,p[style*="font-size: 18px"]{font-size:17px !important}
+  h2.g-h2.p[style*="white-space: nowrap"]{white-space:normal !important}
+  p[style*="font-size: 15px"],[style*="font-size: 15px; line-height: 1.5"]{font-size:16px !important}
+  p[style*="font-size: 13px"],span[style*="margin-top: 14px; font-size: 13px"]{font-size:14px !important}
+  [style*="justify-content: space-between; gap: 48px"]{flex-direction:column !important;align-items:flex-start !important;gap:24px !important}
+  .g-btn,.g-btn2,.g-btnd{padding:0 6px 0 20px !important;gap:10px !important;font-size:16px !important}
+}
+
+/* ---- QA: footer ---- */
+.f5-link[style*="font-size: 15px; color: #9FB5AC"]{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:900px){
+  .f5-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:32px 24px !important}
+}
+@media (max-width:640px){
+  .f5-gal{zoom:.62;margin-top:48px !important}
+  .f5 h2{font-size:40px !important;line-height:1.06 !important;text-wrap:balance}
+  .f5 h2 span{display:block;text-wrap:balance}
+  .f5-grid{gap:28px 16px !important}
+}
+/* Laptop gutters */
+@media (min-width:901px) and (max-width:1240px){[style*="max-width: 1160px"],[style*="max-width: 1040px"]{max-width:calc(100% - 80px) !important}[style*="max-width: 1240px"]{padding-left:64px !important;padding-right:64px !important}[style*="max-width: 1440px"][style*="padding: 12px 16px"]{padding-left:40px !important;padding-right:40px !important}h2{font-size:48px !important;line-height:1.08 !important;letter-spacing:-0.03em !important}}
+</style>
+</helmet>
+<div style="position: relative; overflow: hidden; background: #12332D; color: #FFFFFF; font-family: 'Google Sans Flex', 'Google Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased">
+  <!-- Footer -->
+  <footer class="f5" style="position: relative; overflow: hidden; background: #12332D; color: #FFFFFF; font-family: 'Google Sans Flex', 'Google Sans', system-ui, sans-serif">
+    <div style="position: relative; z-index: 3; padding: 112px 24px 0; display: flex; flex-direction: column; align-items: center; text-align: center">
+      <span style="display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 16px; border-radius: 999px; background: #1A4239; border: 1px solid rgba(212,242,122,0.22); font-size: 15px; color: #D4F27A"><span style="position: relative; width: 8px; height: 8px"><span style="position: absolute; inset: 0; border-radius: 99px; background: #D4F27A"></span><span style="position: absolute; inset: -4px; border-radius: 99px; border: 1.5px solid #D4F27A; animation: {{ f5Ping }}"></span></span>Your first 3 days are on us</span>
+      <h2 style="margin: 28px 0 0; font-size: 60px; line-height: 1.04; font-weight: 400; letter-spacing: -0.035em">Bring the brief <br><span style="color: #D4F27A">We'll take it from there</span></h2>
+      <div class="f5-ctas" style="margin-top: 44px; display: flex; align-items: center; justify-content: center; gap: 12px">
+        <a class="f5-btn" href="#pricing" style="height: 56px; box-sizing: border-box; padding: 0 8px 0 24px; border-radius: 16px; background: #D4F27A; color: #12332D; font-size: 16px; font-weight: 500; display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; text-decoration: none">Start your 3-day free trial<span style="width: 40px; height: 40px; border-radius: 12px; background: #12332D; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4F27A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="f5-ghost" href="#pricing" style="height: 56px; box-sizing: border-box; padding: 0 24px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2); color: #FFFFFF; font-size: 16px; font-weight: 500; display: inline-flex; align-items: center; white-space: nowrap; text-decoration: none">See pricing</a>
+      </div>
+      <div class="f5-trust" style="margin-top: 28px; display: flex; align-items: center; justify-content: center; gap: 28px; font-size: 15px; color: #C4D3CC">
+        <span style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4F27A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>24-hour delivery on most requests</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4F27A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Unlimited revisions</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4F27A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Cancel any time</span>
+      </div>
+    </div>
+
+    <div class="f5-gal" aria-hidden="true" style="position: relative; z-index: 2; height: 440px; margin-top: 72px; margin-bottom: -24px; perspective: 900px; perspective-origin: 50% 38%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 84%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 84%, transparent 100%)">
+      <div style="position: absolute; left: 50%; bottom: -40px; width: 70%; height: 140px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(closest-side, rgba(212,242,122,0.16), rgba(212,242,122,0) 100%); filter: blur(12px); pointer-events: none"></div>
+      <div style="position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; transform: translateZ(440px) rotateX(-7deg)">
+        <div style="position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; animation: {{ f5Spin }}">
+          <sc-for list="{{ f5Cards }}" as="c" hint-placeholder-count="18"><div style="position: absolute; left: -125px; top: -165px; width: 250px; height: 330px; box-sizing: border-box; padding: 10px; border-radius: 34px; background: #1A4239; box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 28px 56px rgba(4,18,15,0.55), 0 8px 18px rgba(4,18,15,0.35); transform: rotateY({{ c.r }}) translateZ(-820px); -webkit-backface-visibility: hidden; backface-visibility: hidden"><div style="position: relative; height: 100%; border-radius: 25px; overflow: hidden; background: {{ c.bg }}; display: flex; align-items: center; justify-content: center"><span style="display: inline-flex; align-items: center; padding: 6px 11px; border-radius: 999px; background: rgba(255,253,251,0.9); border: 1px dashed #CDD1CA; font-size: 12px; color: #576059; white-space: nowrap">[Work image]</span><span style="position: absolute; left: 14px; bottom: 14px; padding: 5px 10px; border-radius: 999px; background: #1A4239; color: #FFFFFF; font-size: 13px; font-weight: 500">{{ c.t }}</span></div></div></sc-for>
+        </div>
+      </div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 30% 55% at 50% 50%, rgba(18,51,45,0.5), rgba(18,51,45,0) 100%); pointer-events: none"></div>
+    </div>
+
+    <div style="position: relative; z-index: 4; border-radius: 48px 48px 0 0; background: #0C2622">
+      <div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px 0">
+        <div class="f5-grid" style="display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 0.7fr)) minmax(0, 1.5fr); gap: 40px; align-items: start">
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px">
+            <img src="./assets/5138aa2d3933b4efc7779e7ef7b89dbf.svg" alt="Endless" style="display: block; height: 36px; width: auto">
+            <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C4D3CC">Unlimited design on one subscription · Bring the brief, we'll take it from there</p>
+            <div style="display: flex; gap: 10px">
+              <a class="f5-soc" href="#" aria-label="Instagram" style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 99px; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="#FFFFFF" stroke="none"></circle></svg></a>
+              <a class="f5-soc" href="#" aria-label="X" style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 99px; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="#FFFFFF"><path d="M3.5 3.5h5.2l4 5.6 4.8-5.6h2.2l-6 7 6.8 9.5h-5.2l-4.3-6-5.2 6H3.6l6.5-7.4z"></path></svg></a>
+              <a class="f5-soc" href="#" aria-label="LinkedIn" style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 99px; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 10.5V17M8 7.4v.1M12 17v-6.5M12 13.4c0-1.7 1-2.9 2.4-2.9s2.1 1 2.1 2.6V17"></path></svg></a>
+              <a class="f5-soc" href="#" aria-label="Dribbble" style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 99px; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M3.4 9.6c5.6.6 10.6-.7 14-4.4M8.6 3.6c3.2 4.2 5.2 9.6 5.8 16.8M3.3 14.6c4.6-3.2 10.8-3.6 17.2-.8"></path></svg></a>
+            </div>
+          </div>
+          <nav aria-label="Explore" style="display: flex; flex-direction: column; gap: 14px"><span class="f5-h">Explore</span><a class="f5-link" href="#services">Services</a><a class="f5-link" href="#work">Our work</a><a class="f5-link" href="#how">How it works</a><a class="f5-link" href="#pricing">Pricing</a></nav>
+          <nav aria-label="Help" style="display: flex; flex-direction: column; gap: 14px"><span class="f5-h">Help</span><a class="f5-link" href="#faq">FAQ</a><a class="f5-link" href="#">Log in</a><a class="f5-link" href="Contact.dc.html">Contact</a></nav>
+          <nav aria-label="Legal" style="display: flex; flex-direction: column; gap: 14px"><span class="f5-h">Legal</span><a class="f5-link" href="#">Terms</a><a class="f5-link" href="#">Privacy</a></nav>
+          <form style="box-sizing: border-box; padding: 24px; border-radius: 24px; background: #12332D; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 14px">
+            <span style="font-size: 18px; letter-spacing: -0.02em; color: #FFFFFF">Made this month</span>
+            <span style="margin-top: -8px; font-size: 15px; line-height: 1.5; color: #9FB5AC">New work and design ideas, once a month</span>
+            <label for="f5-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">Email address</label>
+            <div style="display: flex; gap: 8px">
+              <input id="f5-email" class="f5-in" type="email" placeholder="Your email" style="flex: 1 1 auto; min-width: 0; height: 52px; box-sizing: border-box; padding: 0 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.16); background: #0C2622; color: #FFFFFF; font-family: inherit; font-size: 15px; outline: none">
+              <button type="submit" style="flex: 0 0 auto; height: 52px; padding: 0 18px; border: 0; border-radius: 14px; background: #D4F27A; color: #12332D; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="f5-bar" style="margin-top: 56px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 15px; color: #9FB5AC">
+          <span>© 2026 Endless · All rights reserved</span>
+          <div style="display: flex; align-items: center; gap: 32px"><a class="f5-link" href="#" style="font-size: 15px; color: #9FB5AC">Terms of Service</a><a class="f5-link" href="#" style="font-size: 15px; color: #9FB5AC">Privacy Policy</a><a class="f5-top" href="#top" aria-label="Back to top" style="width: 44px; height: 44px; border-radius: 14px; background: #D4F27A; display: inline-flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12332D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M6 11l6-6 6 6"></path></svg></a></div>
+        </div>
+        <img src="./assets/305a649e75e7ef7f287cfc3948410f23.svg" alt="" aria-hidden="true" style="display: block; width: 100%; height: auto; padding: 16px 0 48px; box-sizing: border-box; opacity: 0.14">
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true,"section":"Motion"},"glyphs":{"editor":"range","min":0,"max":1,"step":0.05,"default":0.5,"section":"Background"},"$preview":{"width":1440,"height":1723}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { spend: 500, designs: 10, bill: 'Year', faq: 0 };
+    this.onSpend = (e) => { const n = Number(e && e.target ? e.target.value : e); if (!isNaN(n)) this.setState({ spend: Math.min(5000, Math.max(0, n)) }); };
+    this.cvs = {}; this.stops = [];
+    this.refA = (el) => { this.cvs.a = el; };
+  }
+  componentDidMount() { this.startAll(); }
+  componentDidUpdate(prev) {
+    if ((prev.motion ?? true) !== (this.props.motion ?? true) || (prev.glyphs ?? 0.5) !== (this.props.glyphs ?? 0.5)) { this.stopAll(); this.startAll(); }
+  }
+  componentWillUnmount() { this.stopAll(); }
+  stopAll() { this.stops.forEach((f) => f()); this.stops = []; }
+  startAll() { ['a'].forEach((k) => { const c = this.cvs[k]; if (c) this.stops.push(this.glyph(c)); }); }
+  glyph(canvas) {
+    const ctx = canvas.getContext && canvas.getContext('2d');
+    if (!ctx) return () => {};
+    const glyphs = '01·•+*/\\<>=';
+    const cell = 14, rate = 0.03, every = 110;
+    const palette = [[160, 124, 96], [160, 124, 96], [160, 124, 96], [214, 112, 76], [104, 150, 102]];
+    let cols = 0, rows = 0, last = 0, raf = 0, stopped = false, chars = [], alphas = [], tints = [];
+    const pick = () => glyphs[Math.floor(Math.random() * glyphs.length)];
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+      canvas.width = Math.max(1, Math.floor(w * dpr)); canvas.height = Math.max(1, Math.floor(h * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(w / cell); rows = Math.ceil(h / cell);
+      const n = cols * rows; chars = new Array(n); alphas = new Array(n); tints = new Array(n);
+      for (let i = 0; i < n; i++) { chars[i] = pick(); alphas[i] = 0.05 + Math.random() * 0.35; tints[i] = Math.floor(Math.random() * palette.length); }
+    };
+    const draw = () => {
+      const w = canvas.clientWidth, h = canvas.clientHeight, s = this.props.glyphs ?? 0.5;
+      ctx.clearRect(0, 0, w, h); if (s <= 0) return;
+      ctx.font = (cell - 2) + 'px ui-monospace, SFMono-Regular, Menlo, monospace'; ctx.textBaseline = 'top';
+      for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+        const i = y * cols + x, c = palette[tints[i]];
+        ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (alphas[i] * s).toFixed(3) + ')';
+        ctx.fillText(chars[i], x * cell, y * cell);
+      }
+    };
+    const tick = (t) => {
+      if (stopped) return;
+      if (t - last >= every) { last = t; const total = cols * rows, m = Math.max(1, Math.floor(total * rate)); for (let k = 0; k < m; k++) { const i = Math.floor(Math.random() * total); chars[i] = pick(); alphas[i] = 0.05 + Math.random() * 0.45; } draw(); }
+      raf = requestAnimationFrame(tick);
+    };
+    resize(); draw();
+    const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if ((this.props.motion ?? true) && !reduce) raf = requestAnimationFrame(tick);
+    let ro = null;
+    if (window.ResizeObserver) { ro = new ResizeObserver(() => { resize(); draw(); }); ro.observe(canvas); }
+    return () => { stopped = true; if (raf) cancelAnimationFrame(raf); if (ro) ro.disconnect(); };
+  }
+  renderVals() {
+    const m = this.props.motion ?? true;
+    const st = this.state;
+    const v = {};
+    v.spin = m ? 'gSpin 18s linear infinite' : 'none';
+    v.lap = m ? 'gLap 6s linear infinite' : 'none';
+    v.halo = m ? 'gHalo 2.4s ease-in-out infinite alternate' : 'none';
+    v.colUp = m ? 'gUp 36s linear infinite' : 'none';
+    v.colDown = m ? 'gDownY 36s linear infinite' : 'none';
+    v.glyphA = this.refA;
+    const B = (id) => 'assets/' + id + '.svg';
+    const A = [B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c')];
+    const C = [B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c'), B('faf8f2a55158f6e7e9a457c47fb7711c')];
+    v.colA = A.concat(A); v.colB = C.concat(C);
+    v.ndl = './assets/50800920ac96316ba50fdfc836ba7bee.svg';
+
+    // Savings: every output comes from the two inputs and the $948 yearly plan.
+    const money = (n) => '$' + Math.round(n).toLocaleString('en-US');
+    const cents = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const sp = st.spend, dz = st.designs, yr = sp * 12;
+    v.spendVal = String(sp);
+    v.onSpend = this.onSpend;
+    v.spendLabel = money(sp);
+    v.spendText = money(sp) + ' a month';
+    v.spendPct = Math.round(sp / 5000 * 100) + '%';
+    v.saving = money(Math.max(0, yr - 948));
+    v.savingNote = yr >= 948
+      ? 'That’s ' + money(yr) + ' a year on design today, minus $948 for the annual plan'
+      : 'At ' + money(yr) + ' a year on design today, the annual plan costs more than you spend now';
+    v.perDesign = cents(79 / dz);
+    const top = Math.max(yr, 948, 1);
+    v.yrNow = money(yr);
+    v.barNow = Math.max(2, Math.round(yr / top * 100)) + '%';
+    v.barEnd = Math.max(2, Math.round(948 / top * 100)) + '%';
+    v.perDesignNow = cents(sp / dz);
+    v.dz = [5, 10, 20, 30].map((n) => {
+      const on = dz === n;
+      return { n: String(n), on: on ? 'true' : 'false', bg: on ? '#D4F27A' : 'rgba(255,255,255,0.06)', fg: on ? '#111111' : '#FFFFFF',
+        ring: on ? 'none' : 'inset 0 0 0 1px rgba(255,255,255,0.12)', pick: () => this.setState({ designs: n }) };
+    });
+
+    // Pricing
+    const yearly = st.bill === 'Year';
+    v.bills = [['Year', 'Annual', 'Save $840'], ['Month', 'Monthly', '']].map(([k, label, tag]) => {
+      const on = st.bill === k;
+      return { label, tag, on: on ? 'true' : 'false', bg: on ? '#FFFFFF' : 'transparent', fg: on ? '#131514' : '#C4D3CC',
+        ring: on ? 'none' : 'none', pick: () => this.setState({ bill: k }) };
+    });
+    v.planName = yearly ? 'Annual plan' : 'Monthly plan';
+    v.planTag = yearly ? 'BEST VALUE' : 'FLEXIBLE';
+    v.planTagBg = yearly ? '#D4F27A' : 'rgba(255,255,255,0.08)';
+    v.planTagFg = yearly ? '#111111' : '#C4D3CC';
+    v.price = yearly ? '$79' : '$149';
+    v.billed = yearly ? 'Billed $948 once a year · That’s $840 less than monthly' : 'Billed $149 every month';
+    v.planCta = yearly ? 'Start your 3-day free trial' : 'Start the monthly plan';
+    v.planPts = ['3 days free to start', 'Unlimited requests and revisions', 'Cancel any time from your dashboard'];
+    v.incl = [
+      { t: 'Unlimited requests', s: 'Add as many as you like', bg: '#12332D' },
+      { t: 'Unlimited revisions', s: 'Until it’s right', bg: '#12332D' },
+      { t: '24-hour delivery', s: 'On most requests', bg: '#12332D' },
+      { t: '41 design services', s: 'Logo to pitch deck', bg: '#12332D' },
+      { t: 'Designer-checked work', s: 'Every file', bg: '#12332D' },
+      { t: 'Your brand kit, saved', s: 'Fonts, colors, logos', bg: '#12332D' }
+    ];
+
+    // FAQ
+    const Q = [
+      ['What does unlimited mean?', 'Add as many design requests as you like · We work through them in the order you set, [number] at a time'],
+      ['How fast will I get my designs?', 'Most requests are delivered within 24 hours · Bigger projects, like a full website, take [timeframe]'],
+      ['What can I request?', 'Logos, branding, flyers, banners and ads, UI/UX, social media, sales funnels, pitch decks and much more · 41 design services in all'],
+      ['How does the free trial work?', 'Your first 3 days are free · A card is required to start · Cancel before the trial ends and you pay $0.'],
+      ['What’s the difference between annual and monthly?', 'Same plan, same services · Annual is $79 a month, billed $948 once a year · Monthly is $149, billed every month'],
+      ['Can I pause or cancel?', 'You can cancel any time from your dashboard · [Pause terms]']
+    ];
+    v.faqs = Q.map(([q, a], i) => {
+      const open = st.faq === i;
+      return { q, a, no: String(i + 1).padStart(2, '0'), nc: open ? '#2F7A4A' : '#9FB5AC', open: open ? 'true' : 'false', rows: open ? '1fr' : '0fr', rot: open ? '45deg' : '0deg',
+        ib: open ? '#D4F27A' : '#FFFFFF', ic: open ? '#111111' : '#1A4239', toggle: () => this.setState({ faq: open ? -1 : i }) };
+    });
+
+    const tq = (a, hl, b, extra) => Object.assign({ q: true, a, hl, b, dir: 'row', al: 'center' }, extra || {});
+    const tall = { dir: 'column', al: 'flex-start', co: true };
+    const vid = (h, bg, prog) => ({ video: true, h, bg, prog });
+    v.tcols = [
+      { mt: '0px', items: [
+        tq('[Client quote about working with Endless. What they asked for, how it went and', '[key result]', 'in their own words.]', tall),
+        vid('400px', '#2A564D', '38%'),
+        tq('[Short client quote about', '[24-hour delivery]', 'or revisions.]'),
+        tq('[Short client quote about how', '[easy it is]', 'to request designs.]')
+      ] },
+      { mt: '0px', items: [
+        vid('280px', '#1A4239', '62%'),
+        tq('[Short client quote with a', '[key phrase]', 'highlighted.]'),
+        { feature: true },
+        tq('[Short client quote about the', '[design quality]', 'they got.]')
+      ] },
+      { mt: '0px', items: [
+        tq('[Short client quote with a', '[key phrase]', 'highlighted.]'),
+        tq('[Client quote about a project Endless designed for them and the', '[difference it made]', 'to their business.]', tall),
+        vid('400px', '#173B34', '24%'),
+        tq('[Short client quote with a', '[key phrase]', 'highlighted.]')
+      ] }
+    ];
+    v.playRing = m ? 'gPlayRing 2s ease-out infinite' : 'none';
+    v.stars = [1, 2, 3, 4, 5];
+    v.spinSlow = m ? 'gSpin 14s linear infinite' : 'none';
+    v.bob = m ? 'gBob 3s ease-in-out infinite alternate' : 'none';
+    const tb = (d, dl) => m ? 'gTBob ' + d + 's ease-in-out ' + dl + 's infinite alternate' : 'none';
+    const P = (id) => 'assets/' + id + '.svg';
+    v.teamCards = [
+      { img: P('faf8f2a55158f6e7e9a457c47fb7711c'), x: '-304px', top: '132px', r: '-13deg', tag: 'Branding', dot: '#2F7A4A', an: 'none' },
+      { img: P('faf8f2a55158f6e7e9a457c47fb7711c'), x: '-154px', top: '92px', r: '-6deg', tag: 'UI/UX', dot: '#D4F27A', an: 'none' },
+      { img: P('faf8f2a55158f6e7e9a457c47fb7711c'), x: '0px', top: '70px', r: '0deg', tag: 'Logo design', dot: '#2F7A4A', an: 'none' },
+      { img: P('faf8f2a55158f6e7e9a457c47fb7711c'), x: '154px', top: '92px', r: '6deg', tag: 'Social media', dot: '#D4F27A', an: 'none' },
+      { img: P('faf8f2a55158f6e7e9a457c47fb7711c'), x: '304px', top: '132px', r: '13deg', tag: 'Pitch decks', dot: '#2F7A4A', an: 'none' }
+    ];
+    v.teamTags = [
+      { t: '[15+] years of experience', pos: 'left: 96px; top: 120px; transform: rotate(-5deg)', an: 'none' },
+      { t: '[3] successful startups', pos: 'left: 150px; top: 338px; transform: rotate(4deg)', an: 'none' },
+      { t: '[7+] years in design', pos: 'right: 104px; top: 112px; transform: rotate(5deg)', an: 'none' },
+      { t: '[100+] happy clients', pos: 'right: 160px; top: 332px; transform: rotate(-4deg)', an: 'none' }
+    ];
+    v.helpIcons = [
+      { l: 'Chat with us', d: 'M4 5h16v11H9l-5 4z' },
+      { l: 'Send a brief', d: 'M7 3h8l4 4v14H7zM14 3v5h5M10 13h6M10 17h4' },
+      { l: 'Book a call', d: 'M3 5h18v11H3zM8 20h8M12 16v4' }
+    ];
+    v.fcols = [
+      { h: 'EXPLORE', l: [{ t: 'Services', h: '#services' }, { t: 'Our work', h: '#work' }, { t: 'How it works', h: '#how' }, { t: 'Pricing', h: '#pricing' }] },
+      { h: 'HELP', l: [{ t: 'FAQ', h: '#faq' }, { t: 'Log in', h: '#' }, { t: 'Contact', h: '#' }] },
+      { h: 'LEGAL', l: [{ t: 'Terms', h: '#' }, { t: 'Privacy', h: '#' }] }
+    ];
+    // Footer: marquee rows and the goggle loop
+    {
+      const fm = this.props.motion ?? true;
+      const FB = (id) => 'assets/' + id + '.svg';
+      const ra = ['faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c'].map(FB);
+      const rb = ['faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c', 'faf8f2a55158f6e7e9a457c47fb7711c'].map(FB);
+      v.f5RowA = ra.concat(ra);
+      v.f5RowB = rb.concat(rb);
+      v.f5MarL = fm ? 'f5MarL 50s linear infinite' : 'none';
+      v.f5Cards = [['App design','#E9F7C4'],['Branding','#F3E3CF'],['Landing pages','#DDE5FC'],['Packaging','#F7DDF1'],['Pitch decks','#E4ECE7'],['Social media','#D4F27A'],['Ad campaigns','#F4F3EF'],['Posters','#E9F7C4'],['Websites','#DDE5FC'],['Logos','#F3E3CF'],['Email','#F7DDF1'],['Merch','#E4ECE7'],['Menus','#F4F3EF'],['UI/UX','#D4F27A'],['Flyers','#F3E3CF'],['Dashboards','#DDE5FC'],['Banners','#F7DDF1'],['Stationery','#E9F7C4']].map(([t, bg], i) => ({ t, bg, r: (i * 20) + 'deg' }));
+      v.f5Spin = fm ? 'f5GalSpin 90s linear infinite' : 'none';
+      v.f5MarR = fm ? 'f5MarR 50s linear infinite' : 'none';
+      v.f5Lap = fm ? 'f5Lap 3.2s linear infinite' : 'none';
+      v.f5Ping = fm ? 'f5Ping 1.8s ease-out infinite' : 'none';
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>
